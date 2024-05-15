@@ -9,7 +9,7 @@
 
 % This allows to type UTF-8 characters like ä,ö,ü,ß
 \usepackage[ngerman]{babel}
-\usepackage{csquotes}
+\usepackage[autostyle,german=guillemets]{csquotes} % Gives german guillemet-quotation marks like in »Quoted text.«
 
 \usepackage[T1]{fontenc}        % Tries to use Postscript Type 1 Fonts for better rendering
 \usepackage[
@@ -38,7 +38,7 @@ sorting=nyt
 \usepackage{enumitem}
 \setlist{noitemsep}
 
-%\usepackage{grffile}           % Allow you to include images (like graphicx). Usage: \includegraphics{path/to/file}
+%\usepackage{grffile}           % Allows you to include images (like graphicx). Usage: \includegraphics{path/to/file}
 
 % Additional packages
 \usepackage{url}                % Lets you typeset urls. Usage: \url{https://...}
@@ -47,7 +47,7 @@ sorting=nyt
 \usepackage[svgnames]{xcolor}   % Obviously colors. Usage: \color{red} Red text
 \usepackage{booktabs}           % Nice rules for tables. Usage \begin{tabular}\toprule ... \midrule ... \bottomrule\end{tabular}
 \usepackage{graphicx}           % A nice way to include images (see above: grffile)
-\usepackage{blindtext}          % Provides commands to generate text so you can see how your document will look
+% \usepackage{blindtext}          % Provides commands to generate text so you can see how your document will look
 
 \usepackage[hang]{footmisc}     % Gives you "hanging" footnotes. Usage \footnote{text}
 \deffootnote{1.5em}{0em}{\thefootnotemark\quad}
