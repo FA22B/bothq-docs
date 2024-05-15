@@ -1,6 +1,6 @@
 \documentclass[
     ,paper=a4
-    ,fontsize=11pt
+    ,fontsize=12pt
     ,bibliography=totoc
     ,sfdefaults=false
     ,headings=small
@@ -12,12 +12,20 @@
 \usepackage{csquotes}
 
 \usepackage[T1]{fontenc}        % Tries to use Postscript Type 1 Fonts for better rendering
-\usepackage[semibold,tabular,default,osf]{sourcesanspro}            % Provides the Latin Modern Font which offers more glyphs than the default Computer Modern
+\usepackage[
+    ,semibold
+    ,tabular
+    ,default
+    ,osf
+]{sourcesanspro}                % Provides the Source Sans Pro font family
 \usepackage[final]{microtype}
 \usepackage{setspace}
-\usepackage[margin=2.5cm,includeheadfoot]{geometry}
+\usepackage[margin=3.3cm, left=2.5cm, right=2.5cm, includeheadfoot]{geometry} % für Seitenränder
+% \usepackage[margin=2.5cm,includeheadfoot]{geometry}
 
 \usepackage{tabularray}
+\usepackage{longtable}
+\usepackage{ragged2e}
 \usepackage{listings}
 
 \usepackage[
@@ -30,18 +38,18 @@ sorting=nyt
 \usepackage{enumitem}
 \setlist{noitemsep}
 
-%\usepackage{grffile}            % Allow you to include images (like graphicx). Usage: \includegraphics{path/to/file}
+%\usepackage{grffile}           % Allow you to include images (like graphicx). Usage: \includegraphics{path/to/file}
 
 % Additional packages
-\usepackage{url}                % Lets you typeset urls. Usage: \url{http://...}
-%\usepackage{breakurl}           % Enables linebreaks for urls
+\usepackage{url}                % Lets you typeset urls. Usage: \url{https://...}
+%\usepackage{breakurl}          % Enables linebreaks for urls
 \usepackage{xspace}             % Use \xpsace in macros to automatically insert space based on context. Usage: \newcommand{\es}{ESPResSo\xspace}
 \usepackage[svgnames]{xcolor}   % Obviously colors. Usage: \color{red} Red text
-\usepackage{booktabs}           % Nice rules for tables. Usage \begin{tabular}\toprule ... \midrule ... \bottomrule
-\usepackage{graphicx}
-\usepackage{blindtext}
+\usepackage{booktabs}           % Nice rules for tables. Usage \begin{tabular}\toprule ... \midrule ... \bottomrule\end{tabular}
+\usepackage{graphicx}           % A nice way to include images (see above: grffile)
+\usepackage{blindtext}          % Provides commands to generate text so you can see how your document will look
 
-\usepackage[hang]{footmisc}
+\usepackage[hang]{footmisc}     % Gives you "hanging" footnotes. Usage \footnote{text}
 \deffootnote{1.5em}{0em}{\thefootnotemark\quad}
 
 \usepackage[
@@ -50,7 +58,6 @@ sorting=nyt
     urlcolor=Teal,
     breaklinks=true,
 ]{hyperref}                     % Provides clickable links in the PDF-document for \ref
-% \usepackage[hyphens]{url}
 
 \usepackage{bookmark}
 
