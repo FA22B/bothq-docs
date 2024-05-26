@@ -3,35 +3,21 @@
 \section{Projektvorbereitung}\label{projektvorbereitung}
 
 \subsection{Ist-Analyse}\label{ist-analyse}
+Derzeit verfügt die HiTec GmbH nicht über ein Discord-Bot-Framework oder anderweitige Dienstleistungen in bezug auf Discord. Dies hat zur Folge, dass die HiTec Gmbh keine Kunden Betreuen kann, die Discord zur Kommunikation nutzen, weder Intern noch mit Kunden.
 
-\begin{itemize}
-  \item
-        Beschreibung der gegenwärtigen Situation:
-  \item
-        Welche Probleme oder Herausforderungen bestehen derzeit?
-  \item
-        Was ist der aktuelle Stand der Technik bzw. des Systems?
-\end{itemize}
+Desweiterem wäre die HiTec Gmbh bei eigener Nutzung von Discord zu Kommunikationszwecken von Dienstleistungen von Drittanbietern abhängig, um die Anwendungsmöglichkeiten von Discord für den eigenen Anwendungsfall anzupassen und zu optimieren.
 
 \subsection{Soll-Analyse}\label{soll-analyse}
-
-\begin{itemize}
-  \item
-        Detaillierte Beschreibung der Projektziele:
-  \item
-        Was soll am Ende des Projektes erreicht sein?
-  \item
-        Welche Verbesserungen und Neuerungen sind geplant?
-\end{itemize}
+Soll-Zustands ist es, das ein Cloud Service der HiTec Gmbh für Discord-Bots existieren soll, das auf der \gls{JDA} \autocite{jda-github,jda-wiki} basiert. Der Service soll  Nutzern über eine Weboberfläche ermöglichen, Plugins zu Discord-Servern hinzuzufügen und zu verwalten. Desweiteren soll ein Framework entwickelt werden, welches ein einfaches hinzufügen von neuen Plugins von Seiten der HiTec Gmbh ermöglicht. Dies erlaubt es der HiTec Gmbh eine modulare Dienstleistung für Kunden, die Discord zu Kommunikationszwecken nutzen, anzubieten und diese auf Wunsch der Kunden einfach anzupassen. 
 
 \subsection{Projektziel detailliert}\label{projektziel-detailliert}
+Der Service soll dem Kunden als Webservice zur verfügung gestellt werden, damit er die Verwaltung seiner Server und Plugins selbstständig durführen kann. Die Platform soll responsive gestaltetwerden mit dem Fokus auf einem benutzerfreundlichen Design und fehlerfreier Funktionalität. 
 
-\begin{itemize}
-  \item
-        Ausführliche Darstellung der Projektziele:
-  \item
-        Beschreibung der funktionalen und nicht-funktionalen Anforderungen.
-\end{itemize}
+Beim öffnen der Webseite soll der Nutzer dazu aufgefordert werden, sich zu authentifizieren. Der Service zur authentifizierung wird hierbei von der Discord-API bereit gestellt.
+
+Auf der Website soll der Nutzer eine Liste Seiner Discord-Server und der verfügbaren Plugins angezeigt bekommen. Die Liste der Server wird von der Discord-API bereitgestellt, die Liste der Plugins wird wiederum von der eigenen Backend-API des Services. Nutzern soll es möglich sein, Plugins und die Einstellungen dieser für jeden Server einzeln und in Echtzeit verwalten zu können. Eine Datenbank im Backend des Services Speichert die so vorgenommenen Einstellungen ab. Das Backend soll die vom Nutzer vorgenommenen Einstellungen automatisiert vornehmen. 
+
+Desweiteren soll ein Framework zum erstellen von Plugins für den Inhaber des Services existieren. Einem Entwickler soll es ermöglicht werden, Code schreiben zu können, der mit einem Dicord-Server interagieren kann. Zusätzlich soll der Entwickler eine Konfigurationsdatei bereitstellen können. Diese soll Parameter enthalten, die vom Endnutzer manipuliert können sollen. Hierzu wird die Konfigurationsdatei beim Aufruf der Plugin-Einstellungen durch den nutzer an das Frontend übermittel, was dann daraus dynamisch ein Interface für den Nutzer generiert.
 
 \subsection{Anforderungen und Technologien}\label{anforderungen-und-technologien}
 
