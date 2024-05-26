@@ -8,31 +8,42 @@
 \appendix
 \section{Anhang}\label{anhang}
 
-\subsection{Glossar}\label{glossar}
-
-\begin{itemize}
-
-  \item
-        Erklärung wichtiger Begriffe und Abkürzungen
-\end{itemize}
+\phantomsection\label{glossar}
+% Glossar ausgeben
+\printglossaries
+\cleardoublepage
 
 \subsection{Literaturverzeichnis}\label{literaturverzeichnis}
 
-\begin{itemize}
-
-  \item
-        Auflistung aller verwendeten Quellen und Literatur
-\end{itemize}
+\printbibliography[heading=none]
+\cleardoublepage
 
 \subsection{Quellcode}\label{quellcode}
 
-\begin{itemize}
-  \item
-        Aussagekräftige Auszüge des Quellcodes:
-
-        \begin{itemize}
-
-          \item
-                Wichtige Codebeispiele und deren Erklärung
-        \end{itemize}
-\end{itemize}
+\begin{lstlisting}[
+  language=Java,
+  caption={Beispielcode für einen ReadyListener in JDA},
+  label=lst:readylistener
+]
+  public class ReadyListener implements EventListener
+  {
+      public static void main(String[] args)
+              throws InterruptedException
+      {
+          // Note: It is important to register your ReadyListener before building
+          JDA jda = JDABuilder.createDefault("token")
+              .addEventListeners(new ReadyListener())
+              .build();
+  
+          // optionally block until JDA is ready
+          jda.awaitReady();
+      }
+  
+      @Override
+      public void onEvent(GenericEvent event)
+      {
+          if (event instanceof ReadyEvent)
+              System.out.println("API is ready!");
+      }
+  }  
+\end{lstlisting}

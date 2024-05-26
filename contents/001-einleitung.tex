@@ -1,31 +1,22 @@
 % !TEX root = ../projektdokumentation.tex
 
-\section{Projektbeschreibung}\label{projektbeschreibung}
+\section{Einleitung}\label{einleitung}
 
-\subsection{Projektumfeld}\label{projektumfeld}
+\subsection{Discord und Discord Bots}\label{discord-und-discord-bots}
+Discord ist eine kostenlose Kommunikationsplattform, die ursprünglich für die Gaming-Com\-mu\-ni\-ty entwickelt wurde, mittlerweile jedoch von einer Vielzahl von Communities und Organisationen genutzt wird. Die Plattform bietet umfassende Funktionen für Text-, Sprach- und Video-Kommunikation sowie für die Organisation von Gruppen.
 
-\begin{itemize}
-  \item
-        Beschreibung des Projekts basierend auf dem bereitgestellten Text:
-  \item
-        \enquote{Auf Basis eines vorhandenen Discord Frameworks für Java soll ein
-        Projekt erstellt werden, welches ein eigenständiges modulares
-        Framework intern bietet, um selbst geschriebene Plugins zu laden und
-        den Nutzern über eine Weboberfläche zur Verfügung zu stellen.}
-  \item
-        Das Framework wird als Cloud-Service angeboten, d.h., dass die Nutzer
-        das Framework nicht selber hosten können.
-\end{itemize}
+Ein grundlegendes Konzept von Discord ist der \emph{Server}. Ein Server ist eine dedizierte Instanz, die von einer Gruppe von Benutzern genutzt wird, um zu kommunizieren und Inhalte zu teilen. Jeder Server kann mehrere \emph{Kanäle} enthalten, die weiter in Text- und Sprachkanäle unterteilt sind. Textkanäle dienen der schriftlichen Kommunikation und dem Austausch von Dateien, während Sprachkanäle für Echtzeit-Audio-Gespräche verwendet werden.\autocite{discord-guide} Discord nutzt eine \gls{ClientServer}\footnote{Alle Begriffe, die im Glossar erklärt werden, sind mit diesem Zeichen \large\adfrightarrowhead\footnotesize\ gekennzeichnet und führen per Klick direkt zur Erklärung.}, bei der alle Daten über zentrale Server verarbeitet und gespeichert werden. Diese Server sind in verschiedenen Rechenzentren weltweit verteilt, um niedrige Latenzzeiten und hohe Verfügbarkeit zu gewährleisten. Die Kommunikation zwischen dem Discord-Client (verfügbar für Desktop, Web und Mobilgeräte) und den Servern erfolgt über das \gls{HTTPS} und \gls{WebSocket}.\autocite{discord-developer}
+
+Ein besonders mächtiges Feature von Discord ist die Unterstützung von \emph{Bots}. Bots sind automatisierte Programme, die über die \gls{DiscordAPI} interagieren können. Die API bietet eine Vielzahl von \gls{Endpoint}, die es Entwicklern ermöglichen, Nachrichten zu senden, Benutzerinformationen abzurufen, Kanäle zu verwalten und auf Ereignisse zu reagieren. Bots werden häufig genutzt, um Server zu moderieren, Spiele zu integrieren, Musik abzuspielen und vieles mehr.
+
+Die \emph{Java Discord API (JDA)} ist eine beliebte Java-Bibliothek, die eine einfache Nutzung der Discord API ermöglicht. Sie abstrahiert viele der komplexen Aspekte der API und bietet eine benutzerfreundliche Schnittstelle für die Bot-Entwicklung.
+
+Discord legt großen Wert auf Sicherheit und Datenschutz. Alle Datenübertragungen sind mit TLS (Transport Layer Security) verschlüsselt, um die Vertraulichkeit und Integrität der Daten zu gewährleisten. Benutzer haben die Kontrolle über ihre Privatsphäre-Einstellungen und können festlegen, wer sie kontaktieren kann und welche Informationen öffentlich sichtbar sind. Discord hat auch Richtlinien und Maßnahmen zum Schutz vor Spam, Missbrauch und Belästigung, um eine positive und sichere Umgebung für alle Benutzer zu gewährleisten.\autocite{discord-privacy}
+
+\subsection{Projektbeschreibung}\label{projektbeschreibung}
+
+In dieser Arbeit wird die Entwicklung eines modularen Discord-Bot-Frameworks als Cloud-Service beschrieben. Dieses Projekt zielt darauf ab, ein innovatives und modulares Framework für Discord-Bots zu entwickeln, das auf der \gls{JDA} \autocite{jda-github,jda-wiki} basiert. Das Framework wird es den Nutzer:innen ermöglichen, benutzerdefinierte Plugins einfach zu erstellen, zu laden und über eine benutzerfreundliche Weboberfläche zu verwalten. Um den Betrieb und die Wartung zu vereinfachen, wird das Framework als Cloud-Service angeboten, sodass die Nutzer keine eigene Hosting-Infrastruktur bereitstellen müssen. Das Projekt beinhaltet die Entwicklung einer \gls{RESTAPI} für die Kommunikation zwischen der Weboberfläche und dem Backend, sowie die Implementierung von vorgefertigten Plugins, die grundlegende Bot-Funktionalitäten abdecken. Durch diese Lösung wird eine hohe Flexibilität und Erweiterbarkeit gewährleistet, um den unterschiedlichen Anforderungen der Nutzer gerecht zu werden.
 
 \subsection{Projektziel}\label{projektziel}
 
-\begin{itemize}
-  \item
-        Definition des Projektziels:
-  \item
-        \enquote{Der Nutzer wird die Möglichkeit haben, den von uns angebotenen
-        Discord-Bot auf eigene Server einzuladen. Sobald dieser auf dem Server
-        ist, hat der Nutzer die Möglichkeit, über die Web-Oberfläche
-        Einstellungen vorzunehmen und Plugins zu aktivieren oder zu
-        deaktivieren sowie diese zu konfigurieren.}
-\end{itemize}
+Das Hauptziel dieses Projekts ist es, ein leistungsfähiges und flexibles Discord-Bot-Framework zu entwickeln, das sowohl für Anfänger als auch für fortgeschrittene Nutzer:innen zugänglich ist. Das Framework soll es ermöglichen, verschiedene Plugins nahtlos zu integrieren und zu verwalten, ohne dass tiefgehende technische Kenntnisse erforderlich sind. Ein weiteres Ziel ist die Bereitstellung als Cloud-Service, um den Nutzern die Komplexität des eigenen Hostings abzunehmen und gleichzeitig eine hohe Verfügbarkeit und Skalierbarkeit sicherzustellen. Dank der REST-API können Benutzeränderungen und Konfigurationen in Echtzeit verarbeitet werden. Die benutzerfreundliche Oberfläche soll Nutzer in die Lage versetzen, ihre Bots einfach zu konfigurieren und anzupassen, was die allgemeine Benutzererfahrung erheblich verbessert.

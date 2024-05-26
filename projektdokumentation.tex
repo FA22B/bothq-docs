@@ -1,10 +1,14 @@
 \documentclass[
     ,paper=a4
-    ,fontsize=12pt
+    ,fontsize=11pt
     ,bibliography=totoc
     ,sfdefaults=false
     ,headings=small
-    ,draft=false
+    ,draft=false,
+    ,numbers=noenddot
+    ,toc=listof
+    ,toc=bibliography
+    ,parskip=half-
 ]{scrartcl}
 
 % This allows to type UTF-8 characters like ä,ö,ü,ß
@@ -14,24 +18,77 @@
 \usepackage[T1]{fontenc}        % Tries to use Postscript Type 1 Fonts for better rendering
 \usepackage[
     ,semibold
-    ,tabular
+    ,lining
     ,default
-    ,osf
+    ,t1
 ]{sourcesanspro}                % Provides the Source Sans Pro font family
+\usepackage[
+    ,scale=.95
+]{sourcecodepro}                % Provides the Source Code Pro font family
+
 \usepackage[final]{microtype}
 \usepackage{setspace}
-\usepackage[margin=3.3cm, left=2.5cm, right=2.5cm, includeheadfoot]{geometry} % für Seitenränder
-% \usepackage[margin=2.5cm,includeheadfoot]{geometry}
+\usepackage[
+    margin=3.3cm,
+    left=2.5cm,
+    right=2.5cm,
+    % includeheadfoot
+]{geometry} % für Seitenränder
 
 \usepackage{tabularray}
 \usepackage{longtable}
 \usepackage{ragged2e}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\definecolor{background}{RGB}{247, 247, 247}
+\definecolor{comments}{RGB}{110, 110, 110}
+\definecolor{keywords}{RGB}{180, 50, 60}
+\definecolor{strings}{RGB}{40, 140, 160}
+\definecolor{numbers}{RGB}{140, 40, 180}
+\definecolor{basics}{RGB}{0, 0, 0}
+
 \usepackage{listings}
+\renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
+\renewcommand{\lstlistingname}{Quelltext}
+
+\lstdefinestyle{mystyle}{
+    basicstyle=\footnotesize\ttfamily\color{basics}, % settings used for the code
+    numbers=left,                       % where to put the line-numbers
+    % numberstyle=\color{green},        % the style that is used for the line-numbers
+    stepnumber=1,                       % the step between two line-numbers.
+    numbersep=6pt,                      % how far the line-numbers are from the code
+    backgroundcolor=\color{background}, % choose the background color. You must add \usepackage{color}
+    showspaces=false,                   % show spaces adding particular underscores
+    showstringspaces=false,             % underline spaces within strings
+    showtabs=false,                     % show tabs within strings adding particular underscores
+    %frame=single,                      % adds a frame around the code
+    %rulecolor=\color{white},           % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+    tabsize=2,                          % sets default tabsize to 2 spaces
+    captionpos=b,                       % sets the caption-position to bottom
+    breaklines=true,                    % sets automatic line breaking
+    breakatwhitespace=false,            % sets if automatic breaks should only happen at whitespace
+    keywordstyle=\color{keywords},      % keyword style
+    commentstyle=\color{comments},      % comment style
+    stringstyle=\color{strings},        % string literal style
+    literate=%
+    *{0}{{{\color{numbers}0}}}1
+     {1}{{{\color{numbers}1}}}1
+     {2}{{{\color{numbers}2}}}1
+     {3}{{{\color{numbers}3}}}1
+     {4}{{{\color{numbers}4}}}1
+     {5}{{{\color{numbers}5}}}1
+     {6}{{{\color{numbers}6}}}1
+     {7}{{{\color{numbers}7}}}1
+     {8}{{{\color{numbers}8}}}1
+     {9}{{{\color{numbers}9}}}1
+}
+
+\lstset{style=mystyle}
 
 \usepackage[
 backend=biber,
-style=numeric,
-sorting=nyt
+style=authoryear-icomp,
+sorting=nyt,
+autocite=footnote,
 ]{biblatex}
 \addbibresource{projekt.bib}
 
@@ -42,34 +99,109 @@ sorting=nyt
 
 % Additional packages
 \usepackage{xurl}               % Lets you typeset urls. Usage: \url{https://...}
-%\usepackage{breakurl}          % Enables linebreaks for urls
-\usepackage{xspace}             % Use \xpsace in macros to automatically insert space based on context. Usage: \newcommand{\es}{ESPResSo\xspace}
-\usepackage[svgnames]{xcolor}   % Obviously colors. Usage: \color{red} Red text
+% \usepackage[svgnames]{xcolor}   % Obviously colors. Usage: \color{red} Red text
 \usepackage{booktabs}           % Nice rules for tables. Usage \begin{tabular}\toprule ... \midrule ... \bottomrule\end{tabular}
 \usepackage{graphicx}           % A nice way to include images (see above: grffile)
-% \usepackage{blindtext}          % Provides commands to generate text so you can see how your document will look
-
 \usepackage[hang]{footmisc}     % Gives you "hanging" footnotes. Usage \footnote{text}
 \deffootnote{1.5em}{0em}{\thefootnotemark\quad}
 
 \usepackage[
     colorlinks=true,
-    linkcolor=Teal,
+    linkcolor=black,
     urlcolor=Teal,
     breaklinks=true,
+    citecolor=black,
+    breaklinks=true,
+    hyperfootnotes=true,
+    pdfpagelabels=true,
+    pdfpagemode=UseOutlines,
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    pdfstartview=Fit,
+    pdfstartpage=1,
+    pdfdisplaydoctitle=true,
+    pdfhighlight=/O,
+    unicode=true
 ]{hyperref}                     % Provides clickable links in the PDF-document for \ref
 
 \usepackage{bookmark}
 
+
+% glossaries
+
+\usepackage[
+    ,toc
+    ,acronym
+    % ,nonumberlist
+    ,nopostdot
+    ,nogroupskip
+    ,style=listgroup
+    ,shortcuts
+    ,section=subsection
+    ,numberedsection
+]{glossaries}
+\glsenablehyper
+
+\usepackage{adforn}
+\renewcommand{\glsentryfmt}{\emph{\glsgenentryfmt}\,\adfrightarrowhead\,}
+
+\makeglossaries
+
+\newglossaryentry{JDA}{
+    name={Java Discord API},
+    description={Die Java Discord API (JDA) ist eine umfassende Programmbibliothek, die Entwicklern ermöglicht, Discord-Bots in der Programmiersprache Java zu erstellen und zu verwalten. JDA bietet eine hohe Abstraktionsebene, um die Kommunikation zwischen einem Java-Programm und der Discord-API zu erleichtern. Mit JDA können Entwickler auf verschiedene Funktionen und Ereignisse in Discord zugreifen, wie das Empfangen und Senden von Nachrichten, das Verwalten von Servern, Kanälen und Benutzern sowie das Reagieren auf verschiedene Interaktionen innerhalb von Discord.
+    }
+}
+
+\newglossaryentry{HTTPS}{
+    name={HTTPS-Protokoll},
+    description={
+        Das HTTPS-Protokoll (Hypertext Transfer Protocol Secure) ist eine Erweiterung des HTTP-Protokolls, die eine sichere Kommunikation über ein Computernetzwerk ermöglicht. HTTPS verwendet das Transport Layer Security (TLS) Protokoll, um die Daten zwischen dem Webbrowser und dem Webserver zu verschlüsseln. Dies stellt sicher, dass die übertragenen Daten vertraulich und vor Manipulationen geschützt sind. HTTPS ist besonders wichtig für Webseiten, die sensible Daten wie Passwörter, Kreditkarteninformationen und persönliche Informationen verarbeiten.
+    }
+}
+
+\newglossaryentry{WebSocket}{
+    name={WebSocket-Verbindungen},
+    description={
+        WebSocket-Verbindungen sind ein Kommunikationsprotokoll, das eine bidirektionale, Echtzeit-Kommunikation zwischen einem Client (z.B. einem Webbrowser) und einem Server ermöglicht. Im Gegensatz zu traditionellen HTTP-Ver\-bin\-dung\-en, die unidirektional sind und für jede Datenübertragung eine neue Verbindung aufbauen, bleibt eine WebSocket-Verbindung während der gesamten Kommunikationssitzung offen. Dies ermöglicht eine effizientere und schnellere Datenübertragung, die besonders für Anwendungen wie Chat-Dienste, Online-Spiele und Echtzeit-Datenfeeds nützlich ist. WebSockets sind in der WebSocket-Spezifikation des IETF (Internet Engineering Task Force) definiert und nutzen das ws:// oder wss:// Schema für unverschlüsselte bzw. verschlüsselte Verbindungen.
+    }
+}
+
+\newglossaryentry{ClientServer}{
+    name={Client-Server-Architektur},
+    description={
+        Die Client-Server-Architektur ist ein Netzwerkmodell, bei dem Aufgaben und Dienste zwischen zwei Hauptkomponenten aufgeteilt werden: dem Client und dem Server. Der Client stellt Anfragen, um auf Ressourcen oder Dienste zuzugreifen, die vom Server bereitgestellt werden. Der Server verarbeitet diese Anfragen und liefert die entsprechenden Antworten oder Ressourcen zurück. Dieses Modell ist weit verbreitet in der Entwicklung von Webanwendungen, bei denen der Client in der Regel ein Webbrowser ist, der Anfragen an einen Webserver stellt.
+    }
+}
+
+\newglossaryentry{DiscordAPI}{
+    name={Discord API},
+    description={
+        Die Discord API ist eine Programmierschnittstelle, die Entwicklern Zugriff auf die Funktionen und Daten von Discord bietet. Mit der API können Entwickler Bots und Anwendungen erstellen, die mit Discord-Servern und -Benutzern interagieren. Die API ermöglicht das Senden und Empfangen von Nachrichten, das Verwalten von Servern und Kanälen, das Abrufen von Benutzerinformationen und vieles mehr. Die Discord API nutzt REST für die meisten ihrer Funktionen und bietet Echtzeit-Updates über WebSockets.
+    }
+}
+
+\newglossaryentry{Endpoint}{
+    name={Endpunkt},
+    description={
+        Ein Endpunkt ist eine spezifische URL innerhalb einer API, die eine bestimmte Funktion oder Ressource repräsentiert. Endpunkte werden verwendet, um verschiedene Operationen wie das Abrufen von Daten, das Senden von Informationen oder das Ausführen von Aktionen zu ermöglichen. Jeder Endpunkt wird durch eine HTTP-Methode (GET, POST, PUT, DELETE usw.) und eine URL definiert. Zum Beispiel könnte ein Endpunkt für das Abrufen von Benutzerinformationen in einer API die URL \url{/users/{id}} haben und mit der HTTP-Methode GET aufgerufen werden.
+    }
+}
+
+\newglossaryentry{RESTAPI}{
+    name={REST-API},
+    description={
+        Eine REST-API (Representational State Transfer Application Programming Interface) ist ein Architekturstil für APIs, der auf den Prinzipien von REST basiert. REST-APIs verwenden HTTP-Anfragen, um auf Ressourcen zuzugreifen und diese zu manipulieren. Diese Ressourcen werden durch URLs identifiziert, und die gängigen HTTP-Methoden (GET, POST, PUT, DELETE) werden verwendet, um verschiedene Operationen auszuführen. REST-APIs sind stateless, was bedeutet, dass jede Anfrage alle Informationen enthält, die der Server benötigt, um sie zu verarbeiten, ohne den Zustand zwischen den Anfragen zu speichern. REST-APIs sind bekannt für ihre Einfachheit, Flexibilität und Skalierbarkeit.
+    }
+}
+
+
 \newcounter{savepage}
 
 \begin{document}
-% \sloppy
 
-% \setstretch{1.15}
+\setstretch{1.15}
 \input{inhalt}
-
-% \nocite{*}
-% \printbibliography
 
 \end{document}
