@@ -35,6 +35,18 @@
     % includeheadfoot
 ]{geometry} % für Seitenränder
 
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyhead[L]{\leftmark}
+% \fancyfoot[R]{\thepage}
+
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearpairofpagestyles
+\ihead{\headmark}
+\ofoot{\pagemark}
+
 \usepackage{tabularray}
 \usepackage{longtable}
 \usepackage{ragged2e}
