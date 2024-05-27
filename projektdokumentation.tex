@@ -29,11 +29,18 @@
 \usepackage[final]{microtype}
 \usepackage{setspace}
 \usepackage[
-    margin=3.3cm,
-    left=2.5cm,
-    right=2.5cm,
+    ,margin=3.3cm
+    ,left=2.5cm
+    ,right=2.5cm
+    ,pdftex
     % includeheadfoot
 ]{geometry} % für Seitenränder
+
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearpairofpagestyles
+\ihead{\headmark}
+\ofoot{\pagemark}
 
 \usepackage{tabularray}
 \usepackage{longtable}
@@ -195,6 +202,14 @@ autocite=footnote,
         Eine REST-API (Representational State Transfer Application Programming Interface) ist ein Architekturstil für APIs, der auf den Prinzipien von REST basiert. REST-APIs verwenden HTTP-Anfragen, um auf Ressourcen zuzugreifen und diese zu manipulieren. Diese Ressourcen werden durch URLs identifiziert, und die gängigen HTTP-Methoden (GET, POST, PUT, DELETE) werden verwendet, um verschiedene Operationen auszuführen. REST-APIs sind stateless, was bedeutet, dass jede Anfrage alle Informationen enthält, die der Server benötigt, um sie zu verarbeiten, ohne den Zustand zwischen den Anfragen zu speichern. REST-APIs sind bekannt für ihre Einfachheit, Flexibilität und Skalierbarkeit.
     }
 }
+
+\newglossaryentry{Scrum}{
+    name={Scrum},
+    description={
+        Scrum ist ein Framework für die agile Softwareentwicklung, das iterative und inkrementelle Prozesse unterstützt. Es besteht aus festen Rollen, Ereignissen und Artefakten, die die Zusammenarbeit im Team fördern und die kontinuierliche Lieferung von funktionierenden Software-Inkrementen ermöglichen. Zu den Rollen gehören der \emph{Product Owner}, der \emph{Scrum Master} und das \emph{Entwicklungsteam}. Die wichtigsten Ereignisse sind der \emph{Sprint}, das \emph{Sprint Planning}, der \emph{Daily Scrum}, das \emph{Sprint Review} und die \emph{Sprint Retrospective}. Zu den Artefakten zählen das \emph{Product Backlog}, das \emph{Sprint Backlog} und das \emph{Increment}. Scrum ermöglicht eine flexible und adaptive Entwicklung, indem es regelmäßig Feedback einholt und das Projekt kontinuierlich an die sich ändernden Anforderungen anpasst.
+    }
+}
+
 
 
 \newcounter{savepage}
