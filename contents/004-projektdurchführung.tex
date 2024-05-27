@@ -23,47 +23,43 @@ Der Methodologie von Scrum folgend wurde das Projekt in drei Sprints unterteilt,
 
 \subsubsection{Klassenmodell}\label{klassenmodell}
 
-Das Klassenmodell unserer Anwendung wurde unter Verwendung der Unified
-Modeling Language (UML) erstellt. Es zeigt die wichtigsten Klassen, ihre
+Das Klassenmodell zeigt die wichtigsten Klassen, ihre
 Attribute und Methoden sowie die Beziehungen zwischen den Klassen.
 
 Zu den Hauptklassen gehören:
 
-\begin{itemize}
-\item
-  \texttt{User}: Repräsentiert einen Benutzer der Anwendung mit
-  Attributen wie \texttt{id}, \texttt{username}, \texttt{password} und
-  \texttt{roles}.
-\item
-  \texttt{Plugin}: Repräsentiert ein Plugin mit Attributen wie
-  \texttt{id}, \texttt{name}, \texttt{description} und \texttt{enabled}.
-\item
-  \texttt{Server}: Repräsentiert einen Discord-Server mit Attributen wie
-  \texttt{id}, \texttt{name}, \texttt{owner} und \texttt{plugins}.
-\end{itemize}
 
-Die Beziehungen zwischen den Klassen sind durch Assoziationen,
+
+
+
+Die Beziehungen zwischen den Entitäten sind durch Assoziationen,
 Aggregationen und Kompositionen gekennzeichnet. Zum Beispiel hat die
 Klasse \texttt{Server} eine Aggregation von \texttt{Plugin}, was
 bedeutet, dass ein Server mehrere Plugins haben kann, aber ein Plugin
 ohne einen Server existieren kann.
 
-\begin{figure}[!h]
-  \centering
-  \includegraphics[width=0.8\textwidth]{images/database-diagram-2024-05-27.png}
-  \caption{Klassenmodell}\label{fig:klassenmodell}
-\end{figure}
-
 \subsubsection{Datenhaltung}\label{datenhaltung}
 
-Für die Datenhaltung wurde eine relationale PostgreSQL-Datenbank erstellt. Die Datenbank enthält Tabellen für Benutzer, Server, Plugins und andere Entitäten.
+Für die Datenhaltung wurde eine relationale Post\-greSQL-Datenbank erstellt. Die Datenbank enthält Tabellen für Benutzer, Server, Plugins und andere Entitäten.
 
 \begin{itemize}
   \item
-        Wahl der Datenhaltung:
+    \texttt{Users}: Repräsentiert einen Benutzer der Anwendung mit
+    Attributen wie \texttt{id}, \texttt{username}, \texttt{password} und
+    \texttt{roles}.
   \item
-        Beschreibung der Datenbankstruktur und des Datenbankmodells
-\end{itemize}
+    \texttt{Plugins}: Repräsentiert ein Plugin mit Attributen wie
+    \texttt{id}, \texttt{name}, \texttt{description} und \texttt{enabled}.
+  \item
+    \texttt{Servers}: Repräsentiert einen Discord-Server mit Attributen wie
+    \texttt{id}, \texttt{name}, \texttt{owner} und \texttt{plugins}.
+  \end{itemize}
+  
+  \begin{wrapfigure}{L}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.48\textwidth]{images/database-diagram-2024-05-27.png}
+    \caption{Datenbankmodell}\label{fig:datenbankmodell}
+  \end{wrapfigure}
 
 \subsubsection{Design Patterns}\label{design-patterns}
 
