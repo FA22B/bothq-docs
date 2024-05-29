@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="35ee8984-b6fa-42ed-951c-f0fdb321f2ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
@@ -18,6 +19,15 @@
 =======
     <list default="true" id="35ee8984-b6fa-42ed-951c-f0fdb321f2ba" name="Changes" comment="" />
 >>>>>>> 46bdad1 (Personal costs)
+=======
+    <list default="true" id="35ee8984-b6fa-42ed-951c-f0fdb321f2ba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents/005-wirtschaftliche-betrachtung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/contents/005-wirtschaftliche-betrachtung.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektdokumentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/projektdokumentation.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektdokumentation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/projektdokumentation.tex" afterDir="false" />
+    </list>
+>>>>>>> c5ce004 (material costs and target group)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,6 +88,7 @@
     "LaTeX.projektdokumentation.executor": "Run",
     "Makeindex.projektdokumentation makeglossaries.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Kostenplanung",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -133,16 +144,25 @@
       <workItem from="1716455445166" duration="2590000" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1716538069680" duration="14241000" />
 =======
       <workItem from="1716538069680" duration="24175000" />
 >>>>>>> 22a8d24 (project completion)
 =======
+=======
+>>>>>>> 7c72223 (material costs and target group)
       <workItem from="1716538069680" duration="24175000" />
 =======
       <workItem from="1716538069680" duration="7322000" />
 >>>>>>> 46bdad1 (Personal costs)
+<<<<<<< HEAD
 >>>>>>> f92400d (Personal costs)
+=======
+=======
+      <workItem from="1716538069680" duration="10791000" />
+>>>>>>> c5ce004 (material costs and target group)
+>>>>>>> 7c72223 (material costs and target group)
     </task>
     <servers />
   </component>
