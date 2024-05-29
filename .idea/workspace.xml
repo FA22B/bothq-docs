@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2745233 (material costs and target group)
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <list default="true" id="35ee8984-b6fa-42ed-951c-f0fdb321f2ba" name="Changes" comment="">
@@ -32,6 +36,15 @@
       <change beforePath="$PROJECT_DIR$/projektdokumentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/projektdokumentation.pdf" afterDir="false" />
     </list>
 >>>>>>> c5ce004 (material costs and target group)
+=======
+    <list default="true" id="35ee8984-b6fa-42ed-951c-f0fdb321f2ba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents/005-wirtschaftliche-betrachtung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/contents/005-wirtschaftliche-betrachtung.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektdokumentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/projektdokumentation.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektdokumentation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/projektdokumentation.tex" afterDir="false" />
+    </list>
+>>>>>>> 2745233 (material costs and target group)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +75,7 @@
   </component>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 618778c (project completion)
   <component name="PropertiesComponent">{
@@ -89,6 +103,8 @@
 }</component>
   <component name="RunManager">
 =======
+=======
+>>>>>>> 2745233 (material costs and target group)
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "LaTeX.000-vorgaben.executor": "Run",
@@ -109,12 +125,18 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+<<<<<<< HEAD
 =======
 >>>>>>> 618778c (project completion)
   }
 }</component>
   <component name="RunManager">
 <<<<<<< HEAD
+=======
+  }
+}]]></component>
+  <component name="RunManager">
+>>>>>>> 2745233 (material costs and target group)
     <configuration default="true" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-makeindex>
         <program>MAKEINDEX</program>
@@ -124,9 +146,12 @@
       </texify-makeindex>
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
 >>>>>>> 46bdad1 (Personal costs)
 =======
 >>>>>>> 618778c (project completion)
+=======
+>>>>>>> 2745233 (material costs and target group)
     <configuration name="projektdokumentation makeglossaries" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-makeindex>
         <program>MAKEGLOSSARIES</program>
@@ -160,6 +185,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1716538069680" duration="14241000" />
 =======
       <workItem from="1716538069680" duration="24175000" />
@@ -171,6 +197,8 @@
 >>>>>>> 71a5b7a (market analyse)
 =======
 >>>>>>> 030d3b7 (project completion)
+=======
+>>>>>>> 9d37323 (material costs and target group)
       <workItem from="1716538069680" duration="24175000" />
 =======
       <workItem from="1716538069680" duration="7322000" />
@@ -193,7 +221,13 @@
 =======
       <workItem from="1716538069680" duration="24175000" />
 >>>>>>> 618778c (project completion)
+<<<<<<< HEAD
 >>>>>>> 030d3b7 (project completion)
+=======
+=======
+      <workItem from="1716538069680" duration="10791000" />
+>>>>>>> 2745233 (material costs and target group)
+>>>>>>> 9d37323 (material costs and target group)
     </task>
     <servers />
   </component>
@@ -213,7 +247,14 @@
   </component>
 </project>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 85fb623 (Personal costs)
 >>>>>>> dfe0375 (Personal costs)
+=======
+=======
+>>>>>>> 85fb623 (Personal costs)
+=======
+>>>>>>> 2745233 (material costs and target group)
+>>>>>>> 9d37323 (material costs and target group)
