@@ -44,22 +44,197 @@ Für die Datenhaltung wurde eine relationale Post\-greSQL-Datenbank erstellt. Di
 
 \begin{itemize}
   \item
-    \texttt{Users}: Repräsentiert einen Benutzer der Anwendung mit
-    Attributen wie \texttt{id}, \texttt{username}, \texttt{password} und
-    \texttt{roles}.
+        Wahl der Datenhaltung:
   \item
-    \texttt{Plugins}: Repräsentiert ein Plugin mit Attributen wie
-    \texttt{id}, \texttt{name}, \texttt{description} und \texttt{enabled}.
-  \item
-    \texttt{Servers}: Repräsentiert einen Discord-Server mit Attributen wie
-    \texttt{id}, \texttt{name}, \texttt{owner} und \texttt{plugins}.
-  \end{itemize}
-  
-  \begin{wrapfigure}{L}{0.5\textwidth}
-    \centering
-    \includegraphics[width=0.48\textwidth]{images/database-diagram-2024-05-27.png}
-    \caption{Datenbankmodell}\label{fig:datenbankmodell}
-  \end{wrapfigure}
+        Beschreibung der Datenbankstruktur und des Datenbankmodells
+\end{itemize}
+
+\subsubsection{Datenbankstruktur und
+Datenbankmodell}\label{datenbankstruktur-und-datenbankmodell}
+
+Die Datenbank besteht aus vier Haupttabellen: \texttt{users},
+\texttt{plugins}, \texttt{servers} und \texttt{server\_plugins}. Jede
+dieser Tabellen speichert spezifische Informationen, die für den Betrieb
+und die Verwaltung der Anwendung notwendig sind. Nachfolgend werden die
+Tabellen und ihre Spalten detailliert beschrieben, gefolgt von einer
+Darstellung der Beziehungen zwischen den Tabellen.
+
+\paragraph{\texorpdfstring{Tabelle
+\texttt{users}}{Tabelle users}}\label{tabelle-users}
+
+Die Tabelle \texttt{users} speichert Informationen über die Benutzer der
+Anwendung. Jede Zeile repräsentiert einen einzelnen Benutzer.
+
+\begin{itemize}
+\item
+  \textbf{id} (INTEGER, PRIMARY KEY, AUTOINCREMENT): Eindeutige
+  Identifikationsnummer des Benutzers. Dies ist der Primärschlüssel der
+  Tabelle und wird automatisch inkrementiert.
+\item
+  \textbf{username} (TEXT, UNIQUE, NOT NULL): Der Benutzername des
+  Nutzers, der zur Anmeldung verwendet wird. Dieser muss eindeutig sein.
+\item
+  \textbf{password} (TEXT, NOT NULL): Der Hashwert des Passworts des
+  Benutzers. Aus Sicherheitsgründen wird das Passwort nicht im Klartext
+  gespeichert.
+\item
+  \textbf{roles} (TEXT): Rollen des Benutzers (z.B. Administrator,
+  Benutzer). Diese Spalte kann mehrere Rollen in einem bestimmten Format
+  enthalten (z.B. durch Kommata getrennt).
+\end{itemize}
+
+\paragraph{\texorpdfstring{Tabelle
+\texttt{plugins}}{Tabelle plugins}}\label{tabelle-plugins}
+
+Die Tabelle \texttt{plugins} enthält Informationen über die
+verschiedenen Plugins, die in der Anwendung verwendet werden können.
+Jedes Plugin stellt eine eigenständige Erweiterung der Funktionalität
+dar.
+
+\begin{itemize}
+\item
+  \textbf{id} (INTEGER, PRIMARY KEY, AUTOINCREMENT): Eindeutige
+  Identifikationsnummer des Plugins. Dies ist der Primärschlüssel der
+  Tabelle und wird automatisch inkrementiert.
+\item
+  \textbf{name} (TEXT, UNIQUE, NOT NULL): Der Name des Plugins.
+\item
+  \textbf{description} (TEXT, NOT NULL): Eine Beschreibung des Plugins,
+  die dessen Funktionalität erklärt.
+\item
+  \textbf{enabled} (BOOLEAN, NOT NULL, DEFAULT FALSE): Ein Flag, das
+  angibt, ob das Plugin aktiviert (TRUE) oder deaktiviert (FALSE) ist.
+\item
+  \textbf{version} (TEXT, NOT NULL): Die Versionsnummer des Plugins.
+\item
+  \textbf{created\_at} (DATETIME, DEFAULT CURRENT\_TIMESTAMP): Das Datum
+  und die Uhrzeit, wann das Plugin erstellt wurde.
+\end{itemize}
+
+\paragraph{\texorpdfstring{Tabelle
+\texttt{servers}}{Tabelle servers}}\label{tabelle-servers}
+
+Die Tabelle \texttt{servers} speichert Informationen über die
+Discord-Server, auf denen der Bot installiert ist.
+
+\begin{itemize}
+\item
+  \textbf{id} (INTEGER, PRIMARY KEY, AUTOINCREMENT): Eindeutige
+  Identifikationsnummer des Servers. Dies ist der Primärschlüssel der
+  Tabelle und wird automatisch inkrementiert.
+\item
+  \textbf{name} (TEXT, NOT NULL): Der Name des Discord-Servers.
+\item
+  \textbf{owner\_id} (INTEGER, NOT NULL, FOREIGN KEY REFERENCES
+  users(id)): Die ID des Benutzers, der der Besitzer des Servers ist.
+  Diese Spalte verweist auf \texttt{users.id}.
+\item
+  \textbf{created\_at} (DATETIME, DEFAULT CURRENT\_TIMESTAMP): Das Datum
+  und die Uhrzeit, wann der Server in der Datenbank erstellt wurde.
+\item
+  \textbf{updated\_at} (DATETIME, DEFAULT CURRENT\_TIMESTAMP): Das Datum
+  und die Uhrzeit, wann der Server zuletzt aktualisiert wurde.
+\end{itemize}
+
+\paragraph{\texorpdfstring{Tabelle
+\texttt{server\_plugins}}{Tabelle server\_plugins}}\label{tabelle-server_plugins}
+
+Die Tabelle \texttt{server\_plugins} verknüpft die Server und die
+Plugins miteinander und speichert spezifische Konfigurationen für jedes
+Plugin auf einem Server.
+
+\begin{itemize}
+\item
+  \textbf{server\_id} (INTEGER, NOT NULL, FOREIGN KEY REFERENCES
+  servers(id)): Die ID des Servers, auf dem das Plugin installiert ist.
+  Diese Spalte verweist auf \texttt{servers.id}.
+\item
+  \textbf{plugin\_id} (INTEGER, NOT NULL, FOREIGN KEY REFERENCES
+  plugins(id)): Die ID des Plugins, das auf dem Server installiert ist.
+  Diese Spalte verweist auf \texttt{plugins.id}.
+\item
+  \textbf{enabled} (BOOLEAN, NOT NULL, DEFAULT FALSE): Ein Flag, das
+  angibt, ob das Plugin auf diesem Server aktiviert (TRUE) oder
+  deaktiviert (FALSE) ist.
+\item
+  \textbf{configurations} (TEXT): Ein JSON-String, der die
+  Konfigurationseinstellungen des Plugins speichert. Dieser String
+  enthält die spezifischen Einstellungen, die der Benutzer für das
+  Plugin auf diesem Server vorgenommen hat.
+\end{itemize}
+
+\subsubsection{Beziehungen zwischen den
+Tabellen}\label{beziehungen-zwischen-den-tabellen}
+
+Die Tabellen sind durch verschiedene Beziehungen miteinander verknüpft,
+um die Datenintegrität zu gewährleisten und die Struktur der Anwendung
+abzubilden.
+
+\begin{itemize}
+\item
+  \textbf{Benutzer und Server}: Ein Benutzer (\texttt{users}) kann
+  mehrere Server (\texttt{servers}) besitzen. Dies wird durch die
+  Fremdschlüsselbeziehung \texttt{servers.owner\_id} zu
+  \texttt{users.id} dargestellt. Ein Benutzer kann somit mehrere Server
+  verwalten.
+\item
+  \textbf{Server und Plugins}: Ein Server (\texttt{servers}) kann
+  mehrere Plugins (\texttt{plugins}) verwenden. Diese Beziehung wird
+  durch die Verknüpfungstabelle \texttt{server\_plugins} realisiert. Die
+  Tabelle \texttt{server\_plugins} enthält die Fremdschlüssel
+  \texttt{server\_plugins.server\_id} und
+  \texttt{server\_plugins.plugin\_id}, die auf \texttt{servers.id} bzw.
+  \texttt{plugins.id} verweisen. Diese Tabelle ermöglicht es, die
+  Konfiguration jedes Plugins für jeden Server individuell zu speichern.
+\end{itemize}
+
+\subsubsection{Detaillierte Beschreibung der
+Beziehungen}\label{detaillierte-beschreibung-der-beziehungen}
+
+\paragraph{Benutzer und Server (1:n
+Beziehung)}\label{benutzer-und-server-1n-beziehung}
+
+\begin{itemize}
+\item
+  \textbf{Primärschlüssel}: \texttt{users.id}
+\item
+  \textbf{Fremdschlüssel}: \texttt{servers.owner\_id}
+\item
+  \textbf{Beschreibung}: Ein Benutzer kann mehrere Server besitzen.
+  Jeder Server hat einen Besitzer, der in der \texttt{owner\_id}-Spalte
+  der \texttt{servers}-Tabelle gespeichert ist.
+\end{itemize}
+
+\paragraph{Server und Plugins (n:m
+Beziehung)}\label{server-und-plugins-nm-beziehung}
+
+\begin{itemize}
+\item
+  \textbf{Primärschlüssel}: \texttt{servers.id}, \texttt{plugins.id}
+\item
+  \textbf{Fremdschlüssel}: \texttt{server\_plugins.server\_id},
+  \texttt{server\_plugins.plugin\_id}
+\item
+  \textbf{Beschreibung}: Ein Server kann mehrere Plugins verwenden, und
+  ein Plugin kann auf mehreren Servern verwendet werden. Diese
+  n:m-Beziehung wird durch die \texttt{server\_plugins}-Tabelle
+  vermittelt, die die IDs der Server und Plugins sowie die
+  Konfigurationseinstellungen für die Plugins auf den jeweiligen Servern
+  speichert.
+\end{itemize}
+
+\subsubsection{Zusammenfassung}\label{zusammenfassung}
+
+Die Datenbankstruktur und das Modell bieten eine robuste Grundlage für
+die Verwaltung von Benutzern, Discord-Servern und Plugins. Die klar
+definierten Beziehungen zwischen den Tabellen gewährleisten eine hohe
+Datenintegrität und ermöglichen eine flexible und erweiterbare
+Architektur für die Anwendung. Die Tabelle \texttt{users} speichert
+Benutzerinformationen, die Tabelle \texttt{servers} speichert
+Serverinformationen, die Tabelle \texttt{plugins} speichert
+Plugin-Informationen, und die Verknüpfungstabelle
+\texttt{server\_plugins} speichert die Zuordnungen und Konfigurationen
+der Plugins zu den jeweiligen Servern.
 
 \subsubsection{Design Patterns}\label{design-patterns}
 
