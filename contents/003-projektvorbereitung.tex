@@ -20,17 +20,27 @@ Auf der Website soll der Nutzer eine Liste Seiner Discord-Server und der verfüg
 Desweiteren soll ein Framework zum erstellen von Plugins für den Inhaber des Services existieren. Einem Entwickler soll es ermöglicht werden, Code schreiben zu können, der mit einem Dicord-Server interagieren kann. Zusätzlich soll der Entwickler eine Konfigurationsdatei bereitstellen können. Diese soll Parameter enthalten, die vom Endnutzer manipuliert können sollen. Hierzu wird die Konfigurationsdatei beim Aufruf der Plugin-Einstellungen durch den nutzer an das Frontend übermittel, was dann daraus dynamisch ein Interface für den Nutzer generiert.
 
 \subsection{Anforderungen und Technologien}\label{anforderungen-und-technologien}
+Zur Durführung des Projektes ist die Nutzung der folgenden Tools und Technologien vorgesehen:
 
 \begin{itemize}
-  \item
-        Auflistung und Beschreibung der Anforderungen:
-  \item
-        Technologische Anforderungen (z.B. REST-API, Datenbanken)
-  \item
-        Zielplattformen und benötigte Technologien (z.B. Cloud-Services)
-\end{itemize}
-
-Die Java Discord API (JDA) ist eine umfassende Programmbibliothek, die Entwicklern ermöglicht, Discord-Bots in der Programmiersprache Java zu erstellen und zu verwalten. JDA bietet eine hohe Abstraktionsebene, um die Kommunikation zwischen einem Java-Programm und der Discord-API zu erleichtern. Mit JDA können Entwickler auf verschiedene Funktionen und Ereignisse in Discord zugreifen, wie das Empfangen und Senden von Nachrichten, das Verwalten von Servern, Kanälen und Benutzern sowie das Reagieren auf verschiedene Interaktionen innerhalb von Discord.
+ \item \textbf{Java Spring Framework} ist ein Open-Source Framework zur Entwicklung von eigenständigen Anwendungen, die auf der Java Virtual Machine (JVM) laufen. Spring bietet eine Abhängigkeitsinjektionsfunktion, bei der Objekte ihre eigenen Abhängikkeiten definieren können, und diese dann später injiziert werden können. Dadurch können modulare Anwendungen aus lose verbundenen Komponenten erstellt werden, was sich sehr gut für Netzanwendungen und Mikroservices eignet. Zusätzlich beinhaltet das Framework auch Funktionen und Unterstützungen für klassiche aufgaben wie zum Beispiel Ausnahmebehandlung, Typumsetzung, Internationalisierung und Weitere,
+ \item \textbf{Java Spring Boot} ist ein Tool, dass die Entwicklung von Anwendungen mit dem Java Spring Framework durch drei Kernfunktionen vereinfacht:
+    \begin{itemize}
+        \item Autokonfiguration
+        \item Ein „Opinionated"-Konfigurationsansatz
+        \item Die Fähigkeit, eigenständige Anwendungen zu erstellen
+    \end{itemize}
+ \item \textbf{Eine Rest API} ist ein Interface, das den Beschränkungen von REST unterliegt. REST steht für „Representational State Transfer“ und wurde vom US-amerikanischen Informatiker Roy Fielding entwickelt. Es handelt sich dabei um eine Sammlung von Architekturbeschränkungen, mit einem Schwerpunkt auf Maschine-zu-Maschine Kommunikation. Bei einer Anforderung über eine Rest-API werden Ressourcen in Form eines HTTP-Formates an einen Client oder Endpunkt geschickt.
+ Restful-APIs zeichnen sich durch folgende Merkmale aus:
+ \begin{itemize}
+     \item Client/Server-Architektur, die Anforderungen per HTTP verwaltet
+     \item Zustandslose Client/Server-Kommunikation
+     \item Cachingfähige Daten
+     \item eine Einheitliche Schnitttstelle
+ \end{itemize}
+ \item \textbf{Angular}
+ \item \textbf{Datenbank/MySql}
+ \item \textbf{Die Java Discord API (JDA)} ist eine umfassende Programmbibliothek, die Entwicklern ermöglicht, Discord-Bots in der Programmiersprache Java zu erstellen und zu verwalten. JDA bietet eine hohe Abstraktionsebene, um die Kommunikation zwischen einem Java-Programm und der Discord-API zu erleichtern. Mit JDA können Entwickler auf verschiedene Funktionen und Ereignisse in Discord zugreifen, wie das Empfangen und Senden von Nachrichten, das Verwalten von Servern, Kanälen und Benutzern sowie das Reagieren auf verschiedene Interaktionen innerhalb von Discord.
         
         Zu den Hauptfunktionen der JDA gehören:
         \begin{itemize}
@@ -41,3 +51,4 @@ Die Java Discord API (JDA) ist eine umfassende Programmbibliothek, die Entwickle
         \end{itemize}
         
         JDA ist besonders für seine einfache Handhabung und umfangreiche Dokumentation bekannt, die es sowohl Anfängern als auch erfahrenen Entwicklern ermöglicht, leistungsstarke und funktionsreiche Discord-Bots zu erstellen. Die Bibliothek wird aktiv gepflegt und weiterentwickelt, um stets mit den neuesten Änderungen und Funktionen der Discord-API kompatibel zu bleiben.
+\end{itemize}
