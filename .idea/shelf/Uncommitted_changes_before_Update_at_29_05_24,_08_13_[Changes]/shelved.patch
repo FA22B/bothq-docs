@@ -1,0 +1,19 @@
+Index: contents/001-einleitung.tex
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>% !TEX root = ../projektdokumentation.tex\n\n\\section{Einleitung}\\label{einleitung}\n\n\\subsection{Projektbeschreibung}\\label{projektbeschreibung}\n\n\\begin{itemize}\n  \\item\n        Beschreibung des Projekts basierend auf dem bereitgestellten Text:\n  \\item\n        \\enquote{Auf Basis eines vorhandenen Discord Frameworks für Java soll ein\n        Projekt erstellt werden, welches ein eigenständiges modulares\n        Framework intern bietet, um selbst geschriebene Plugins zu laden und\n        den Nutzern über eine Weboberfläche zur Verfügung zu stellen.}\n  \\item\n        Das Framework wird als Cloud-Service angeboten, d.h., dass die Nutzer\n        das Framework nicht selber hosten können.\n\\end{itemize}\n\n\\subsection{Projektziel}\\label{projektziel}\n\n\\begin{itemize}\n  \\item\n        Definition des Projektziels:\n  \\item\n        \\enquote{Der Nutzer wird die Möglichkeit haben, den von uns angebotenen\n        Discord-Bot auf eigene Server einzuladen. Sobald dieser auf dem Server\n        ist, hat der Nutzer die Möglichkeit, über die Web-Oberfläche\n        Einstellungen vorzunehmen und Plugins zu aktivieren oder zu\n        deaktivieren sowie diese zu konfigurieren.}\n\\end{itemize}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/contents/001-einleitung.tex b/contents/001-einleitung.tex
+--- a/contents/001-einleitung.tex	(revision 5cca5f83f07ac098de483999ed7b8e5c61e3f46b)
++++ b/contents/001-einleitung.tex	(date 1716455897453)
+@@ -6,7 +6,7 @@
+ 
+ \begin{itemize}
+   \item
+-        Beschreibung des Projekts basierend auf dem bereitgestellten Text:
++        BeschreibungEN des Projekts basierend auf dem bereitgestellten Text:
+   \item
+         \enquote{Auf Basis eines vorhandenen Discord Frameworks für Java soll ein
+         Projekt erstellt werden, welches ein eigenständiges modulares
