@@ -133,7 +133,7 @@
 <<<<<<< HEAD
 =======
   }
-}]]></component>
+}</component>
   <component name="RunManager">
 >>>>>>> 2745233 (material costs and target group)
     <configuration default="true" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
