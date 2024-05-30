@@ -22,7 +22,12 @@
 =======
     <list default="true" id="35ee8984-b6fa-42ed-951c-f0fdb321f2ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/contents/005-wirtschaftliche-betrachtung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/contents/005-wirtschaftliche-betrachtung.tex" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/contents/006-projektabschluss.tex" beforeDir="false" afterPath="$PROJECT_DIR$/contents/006-projektabschluss.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektdokumentation.ist" beforeDir="false" afterPath="$PROJECT_DIR$/projektdokumentation.ist" afterDir="false" />
+>>>>>>> 618778c (project completion)
       <change beforePath="$PROJECT_DIR$/projektdokumentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/projektdokumentation.pdf" afterDir="false" />
     </list>
 >>>>>>> c5ce004 (material costs and target group)
@@ -55,6 +60,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 618778c (project completion)
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;LaTeX.000-vorgaben.executor&quot;: &quot;Run&quot;,
@@ -75,6 +83,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+<<<<<<< HEAD
   }
 }</component>
   <component name="RunManager">
@@ -99,9 +108,12 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+=======
+>>>>>>> 618778c (project completion)
   }
-}]]></component>
+}</component>
   <component name="RunManager">
+<<<<<<< HEAD
     <configuration default="true" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-makeindex>
         <program>MAKEINDEX</program>
@@ -112,6 +124,8 @@
       <method v="2" />
     </configuration>
 >>>>>>> 46bdad1 (Personal costs)
+=======
+>>>>>>> 618778c (project completion)
     <configuration name="projektdokumentation makeglossaries" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-makeindex>
         <program>MAKEGLOSSARIES</program>
@@ -144,6 +158,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1716538069680" duration="14241000" />
 =======
       <workItem from="1716538069680" duration="24175000" />
@@ -153,6 +168,8 @@
 >>>>>>> 7c72223 (material costs and target group)
 =======
 >>>>>>> 71a5b7a (market analyse)
+=======
+>>>>>>> 030d3b7 (project completion)
       <workItem from="1716538069680" duration="24175000" />
 =======
       <workItem from="1716538069680" duration="7322000" />
@@ -169,7 +186,13 @@
 =======
       <workItem from="1716538069680" duration="14241000" />
 >>>>>>> 94918b4 (market analyse)
+<<<<<<< HEAD
 >>>>>>> 71a5b7a (market analyse)
+=======
+=======
+      <workItem from="1716538069680" duration="24175000" />
+>>>>>>> 618778c (project completion)
+>>>>>>> 030d3b7 (project completion)
     </task>
     <servers />
   </component>
