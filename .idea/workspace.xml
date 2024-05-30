@@ -7,7 +7,6 @@
     <list default="true" id="35ee8984-b6fa-42ed-951c-f0fdb321f2ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contents/005-wirtschaftliche-betrachtung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/contents/005-wirtschaftliche-betrachtung.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projektdokumentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/projektdokumentation.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +96,7 @@
       <updated>1716455279419</updated>
       <workItem from="1716455280551" duration="157000" />
       <workItem from="1716455445166" duration="2590000" />
-      <workItem from="1716538069680" duration="14241000" />
+      <workItem from="1716538069680" duration="18636000" />
     </task>
     <servers />
   </component>
