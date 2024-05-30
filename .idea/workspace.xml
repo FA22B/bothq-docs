@@ -39,6 +39,7 @@
 =======
     <list default="true" id="35ee8984-b6fa-42ed-951c-f0fdb321f2ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/contents/005-wirtschaftliche-betrachtung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/contents/005-wirtschaftliche-betrachtung.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projektdokumentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/projektdokumentation.pdf" afterDir="false" />
     </list>
