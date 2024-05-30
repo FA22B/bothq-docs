@@ -3,53 +3,72 @@
 \section{Projektvorbereitung}\label{projektvorbereitung}
 
 \subsection{Ist-Analyse}\label{ist-analyse}
-Derzeit verfügt die HiTec GmbH nicht über ein Discord-Bot-Framework oder anderweitige Dienstleistungen in bezug auf Discord. Dies hat zur Folge, dass die HiTec Gmbh keine Kunden Betreuen kann, die Discord zur Kommunikation nutzen, weder Intern noch mit Kunden.
 
-Desweiterem wäre die HiTec Gmbh bei eigener Nutzung von Discord zu Kommunikationszwecken von Dienstleistungen von Drittanbietern abhängig, um die Anwendungsmöglichkeiten von Discord für den eigenen Anwendungsfall anzupassen und zu optimieren.
+Derzeit verfügt die HiTec GmbH nicht über ein Discord-Bot-Framework oder anderweitige Dienstleistungen in Bezug auf Discord. Dies hat zur Folge, dass die HiTec Gmbh keine Kunden Betreuen kann, die Discord zur Kommunikation nutzen, weder Intern noch mit Kunden.
 
-\subsection{Soll-Analyse}\label{soll-analyse}
-Soll-Zustands ist es, das ein Cloud Service der HiTec Gmbh für Discord-Bots existieren soll, das auf der \gls{JDA} \autocite{jda-github,jda-wiki} basiert. Der Service soll  Nutzern über eine Weboberfläche ermöglichen, Plugins zu Discord-Servern hinzuzufügen und zu verwalten. Desweiteren soll ein Framework entwickelt werden, welches ein einfaches hinzufügen von neuen Plugins von Seiten der HiTec Gmbh ermöglicht. Dies erlaubt es der HiTec Gmbh eine modulare Dienstleistung für Kunden, die Discord zu Kommunikationszwecken nutzen, anzubieten und diese auf Wunsch der Kunden einfach anzupassen. 
+Des Weiteren wäre die HiTec GmbH bei eigener Nutzung von Discord zu Kommunikationszwecken von Dienstleistungen von Drittanbietern abhängig, um die Anwendungsmöglichkeiten von Discord für den eigenen Anwendungsfall anzupassen und zu optimieren. Folgerichtig ist es notwendig, ein eigenes Discord-Bot-Framework zu entwickeln, das die Anforderungen der Kunden erfüllt und die Nutzung von Discord für die HiTec GmbH optimiert.
 
-\subsection{Projektziel detailliert}\label{projektziel-detailliert}
-Der Service soll dem Kunden als Webservice zur verfügung gestellt werden, damit er die Verwaltung seiner Server und Plugins selbstständig durführen kann. Die Platform soll responsive gestaltetwerden mit dem Fokus auf einem benutzerfreundlichen Design und fehlerfreier Funktionalität. 
-
-Beim öffnen der Webseite soll der Nutzer dazu aufgefordert werden, sich zu authentifizieren. Der Service zur authentifizierung wird hierbei von der Discord-API bereit gestellt.
-
-Auf der Website soll der Nutzer eine Liste Seiner Discord-Server und der verfügbaren Plugins angezeigt bekommen. Die Liste der Server wird von der Discord-API bereitgestellt, die Liste der Plugins wird wiederum von der eigenen Backend-API des Services. Nutzern soll es möglich sein, Plugins und die Einstellungen dieser für jeden Server einzeln und in Echtzeit verwalten zu können. Eine Datenbank im Backend des Services Speichert die so vorgenommenen Einstellungen ab. Das Backend soll die vom Nutzer vorgenommenen Einstellungen automatisiert vornehmen. 
-
-Desweiteren soll ein Framework zum erstellen von Plugins für den Inhaber des Services existieren. Einem Entwickler soll es ermöglicht werden, Code schreiben zu können, der mit einem Dicord-Server interagieren kann. Zusätzlich soll der Entwickler eine Konfigurationsdatei bereitstellen können. Diese soll Parameter enthalten, die vom Endnutzer manipuliert können sollen. Hierzu wird die Konfigurationsdatei beim Aufruf der Plugin-Einstellungen durch den nutzer an das Frontend übermittel, was dann daraus dynamisch ein Interface für den Nutzer generiert.
-
-\subsection{Anforderungen und Technologien}\label{anforderungen-und-technologien}
-Zur Durführung des Projektes ist die Nutzung der folgenden Tools und Technologien vorgesehen:
+Im Vorfeld des Projekts wurden Interviews mit aktuellen Nutzern geführt, um die Anforderungen und Erwartungen an das Discord-Bot-Framework zu ermitteln. Dabei wurden folgende Schwachstellen identifiziert:
 
 \begin{itemize}
- \item \textbf{Java Spring Framework} ist ein Open-Source Framework zur Entwicklung von eigenständigen Anwendungen, die auf der Java Virtual Machine (JVM) laufen. Spring bietet eine Abhängigkeitsinjektionsfunktion, bei der Objekte ihre eigenen Abhängikkeiten definieren können, und diese dann später injiziert werden können. Dadurch können modulare Anwendungen aus lose verbundenen Komponenten erstellt werden, was sich sehr gut für Netzanwendungen und Mikroservices eignet. Zusätzlich beinhaltet das Framework auch Funktionen und Unterstützungen für klassiche aufgaben wie zum Beispiel Ausnahmebehandlung, Typumsetzung, Internationalisierung und Weitere,
- \item \textbf{Java Spring Boot} ist ein Tool, dass die Entwicklung von Anwendungen mit dem Java Spring Framework durch drei Kernfunktionen vereinfacht:
+    \item \textbf{Ineffiziente Plugin-Verwaltung:} Die derzeitige Plugin-Verwaltung ist umständlich und zeitaufwändig, da Plugins manuell hinzugefügt und konfiguriert werden müssen.
+    \item \textbf{Fehlende Automatisierungsprozesse:} Es fehlen Automatisierungsprozesse, um wiederkehrende Aufgaben zu vereinfachen und zu beschleunigen.
+    \item \textbf{Unzureichende Benutzeroberflächen:} Die Benutzeroberflächen sind unübersichtlich und nicht intuitiv zu bedienen, was zu Fehlern und Verzögerungen führt.
+    \item \textbf{Mangelnde Dokumentation:} Die Dokumentation des Discord-Frameworks ist unvollständig und schwer verständlich, was die Nutzung erschwert.
+    \item \textbf{Fehlende Schulungen:} Es gibt keine Schulungen oder Schulungsmaterialien, um neue Nutzer in die Nutzung des Discord-Frameworks einzuführen.
+    \item \textbf{Mangelnde Integration:} Das Discord-Framework ist nicht vollständig in die bestehenden Systeme der HiTec GmbH integriert, was zu Inkonsistenzen und Datenverlust führen kann.
+    \item \textbf{Fehlende Erweiterbarkeit:} Das Discord-Framework ist nicht einfach erweiterbar, um neue Funktionen und Anforderungen hinzuzufügen.
+\end{itemize}
+
+Schnell ließ sich daraus der anvisierte Soll-Zustand ableiten, der im folgenden Abschnitt beschrieben wird.
+
+\subsection{Soll-Analyse}\label{soll-analyse}
+Der angestrebte Soll-Zustand sieht vor, dass ein Cloud-Service der HiTec GmbH für Discord-Bots existiert, der auf der \gls{JDA} \autocite{jda-github,jda-wiki} basiert. Dieser Service soll den Nutzern über eine Weboberfläche ermöglichen, Plugins zu ihren Discord-Servern hinzuzufügen und zu verwalten. Zudem soll ein Framework entwickelt werden, das das einfache Hinzufügen neuer Plugins durch die HiTec GmbH ermöglicht. Dies erlaubt es der HiTec GmbH, eine modulare Dienstleistung für Kunden anzubieten, die Discord zu Kommunikationszwecken nutzen, und diese auf Wunsch der Kunden flexibel anzupassen.
+
+\subsection{Detaillierte Zielsetzung des Projekts}\label{projektziel-detailliert}
+Der Service wird den Kunden als Webservice zur Verfügung gestellt, sodass sie ihre Server und Plugins eigenständig verwalten können. Die Plattform wird responsive gestaltet, mit besonderem Augenmerk auf benutzerfreundlichem Design und fehlerfreier Funktionalität.
+
+Beim Öffnen der Webseite wird der Nutzer aufgefordert, sich zu authentifizieren. Dieser Authentifizierungsdienst wird von der Discord-API bereitgestellt.
+
+Auf der Webseite soll der Nutzer eine Übersicht seiner Discord-Server sowie der verfügbaren Plugins sehen können. Die Liste der Server wird von der Discord-API bereitgestellt, während die Liste der Plugins von der eigenen Backend-API des Services stammt. Den Nutzern soll es ermöglicht werden, Plugins und deren Einstellungen für jeden Server individuell und in Echtzeit zu verwalten. Eine Datenbank im Backend des Services speichert die vorgenommenen Einstellungen ab und das Backend übernimmt die Konfigurationen automatisch.
+
+Zusätzlich soll ein Framework zum Erstellen von Plugins für den Inhaber des Services bereitgestellt werden. Entwicklern soll es ermöglicht werden, Code zu schreiben, der mit einem Discord-Server interagiert. Zudem soll der Entwickler eine Konfigurationsdatei bereitstellen können, die Parameter enthält, die vom Endnutzer verändert werden können. Diese Konfigurationsdatei wird beim Aufruf der Plugin-Einstellungen durch den Nutzer an das Frontend übermittelt, welches daraus dynamisch ein Interface für den Nutzer generiert.
+
+\subsection{Anforderungen und Technologien}\label{anforderungen-und-technologien}
+Zur Durchführung des Projekts ist die Nutzung der folgenden Tools und Technologien vorgesehen:
+
+\begin{description}
+ \item[Java Spring Framework] ist ein Open-Source-Framework zur Entwicklung von eigenständigen Anwendungen, die auf der Java Virtual Machine (JVM) laufen. Spring bietet eine Abhängigkeitsinjektionsfunktion, bei der Objekte ihre eigenen Abhängigkeiten definieren können, die dann später injiziert werden. Dadurch können modulare Anwendungen aus lose gekoppelten Komponenten erstellt werden, was sich sehr gut für Netzanwendungen und Mikroservices eignet. Zusätzlich beinhaltet das Framework auch Funktionen und Unterstützung für klassische Aufgaben wie zum Beispiel Ausnahmebehandlung, Typumsetzung, Internationalisierung und weitere.
+
+ \item[Java Spring Boot] ist ein Tool, das die Entwicklung von Anwendungen mit dem Java Spring Framework durch drei Kernfunktionen vereinfacht:
     \begin{itemize}
         \item Autokonfiguration
-        \item Ein „Opinionated"-Konfigurationsansatz
+        \item Ein \enquote{Opinionated}-Konfigurationsansatz
         \item Die Fähigkeit, eigenständige Anwendungen zu erstellen
     \end{itemize}
- \item \textbf{Eine Rest API} ist ein Interface, das den Beschränkungen von REST unterliegt. REST steht für „Representational State Transfer“ und wurde vom US-amerikanischen Informatiker Roy Fielding entwickelt. Es handelt sich dabei um eine Sammlung von Architekturbeschränkungen, mit einem Schwerpunkt auf Maschine-zu-Maschine Kommunikation. Bei einer Anforderung über eine Rest-API werden Ressourcen in Form eines HTTP-Formates an einen Client oder Endpunkt geschickt.
- Restful-APIs zeichnen sich durch folgende Merkmale aus:
+
+ \item[Eine REST API] ist ein Interface, das den Beschränkungen von REST unterliegt. REST steht für \enquote{Representational State Transfer} und wurde vom US-amerikanischen Informatiker Roy Fielding entwickelt. Es handelt sich dabei um eine Sammlung von Architekturbeschränkungen mit einem Schwerpunkt auf Maschine-zu-Maschine-Kommunikation. Bei einer Anforderung über eine REST-API werden Ressourcen in Form eines HTTP-Formats an einen Client oder Endpunkt geschickt. RESTful-APIs zeichnen sich durch folgende Merkmale aus:
  \begin{itemize}
      \item Client/Server-Architektur, die Anforderungen per HTTP verwaltet
      \item Zustandslose Client/Server-Kommunikation
      \item Cachingfähige Daten
-     \item eine Einheitliche Schnitttstelle
+     \item Eine einheitliche Schnittstelle
  \end{itemize}
- \item \textbf{Angular} ist ein auf Typescript basierendes Front-End Framework zur entwicklung von Webapplicationen. Es wird als Open-Source-Plattform von einer Community aus Einzelpersonen und Firmen, angeführt durch Google, entwickelt.
- Angular verwendet eine Komponentenarchitektur, um Webanwendungen zu erstellen, bei der jeder Teil der Anwendung in unabhängige, wiederverwendbare Komponenten aufgeteilt wird. Zusätzlich liefert Angular viele Tools zur Webentwicklung, sowie Routing- und Navigationssysteme, eineleistungsfähige Templatingsprache und weitere. Vorteile von Angular sind unter anderem:
+
+ \item[Angular] ist ein auf TypeScript basierendes Front-End-Framework zur Entwicklung von Webanwendungen. Es wird als Open-Source-Plattform von einer Community aus Einzelpersonen und Firmen, angeführt durch Google, entwickelt. Angular verwendet eine Komponentenarchitektur, um Webanwendungen zu erstellen, bei der jeder Teil der Anwendung in unabhängige, wiederverwendbare Komponenten aufgeteilt wird. Zusätzlich liefert Angular viele Tools zur Webentwicklung, wie Routing- und Navigationssysteme, eine leistungsfähige Templating-Sprache und weitere. Vorteile von Angular sind unter anderem:
  \begin{itemize}
      \item Reduzierter Code
      \item Einfache Refaktorierung
-     \item gute Testbarkeit
+     \item Gute Testbarkeit
      \item Wiederverwendbare Code-Komponenten
      \item Große Community und ständige Weiterentwicklung
  \end{itemize}
- \item \textbf{Postgresql} , allgemein „Post-GRES“ ausgesprochen, ist eine Open-Source-Datenbank, die für ihre Zuverlässigkeit, Flexibilität und Unterstützung offener technischer Standards bekannt ist. Im Gegensatz zu anderen RDMBS (Relational Database Management Systems) unterstützt PostgreSQL sowohl nicht-relationale als auch relationale Datentypen. Dies macht sie zu einer der konformsten, stabilsten und ausgereiftesten relationalen Datenbanken, die aktuell verfügbar sind.Es wurde ursprünglich 1986 als Nachfolger von INGRES (einem in den frühen 1970er Jahren begonnenen Open-Source-SQL-Projekt für relationale Datenbanken) entwickelt und war die Idee von Michael Stonebraker, einem Informatikprofessor in Berkeley.
- \item \textbf{Discord} ist ein Service für die Online-Kommunikation, Instant Massaging, Sprach- und Vidoekonferenzen. Es ist sowohl als Webanwendung als auch als Client Software auf allen gängigen Betriebssystemen genutzt werden. Ursprünglich war Discord vornehmend für die Videospiel-Szene gedacht, um während des Spielens Informationen mit Mitspielern austauschen zu können. Inzwischen wird Discord jedoch von einer großen Anzahl an Online-Communitys genutzt. Das Konzept von Discord stammt von Jason Citron, der OpenFeint, eine Social-Gaming-Plattform für mobile Spiele, gegründet hatte, und von Stanislav Vishnevsky, dem Gründer von Guildwork, einer weiteren Social-Gaming-Plattform.
- \item \textbf{Die Java Discord API (JDA)} ist eine umfassende Programmbibliothek, die Entwicklern ermöglicht, Discord-Bots in der Programmiersprache Java zu erstellen und zu verwalten. JDA bietet eine hohe Abstraktionsebene, um die Kommunikation zwischen einem Java-Programm und der Discord-API zu erleichtern. Mit JDA können Entwickler auf verschiedene Funktionen und Ereignisse in Discord zugreifen, wie das Empfangen und Senden von Nachrichten, das Verwalten von Servern, Kanälen und Benutzern sowie das Reagieren auf verschiedene Interaktionen innerhalb von Discord.
+
+ \item[PostgreSQL], allgemein \enquote{Post-GRES} ausgesprochen, ist eine Open-Source-Datenbank, die für ihre Zuverlässigkeit, Flexibilität und Unterstützung offener technischer Standards bekannt ist. Im Gegensatz zu anderen RDBMS (Relational Database Management Systems) unterstützt PostgreSQL sowohl relationale als auch nicht-relationale Datentypen. Dies macht sie zu einer der konformsten, stabilsten und ausgereiftesten relationalen Datenbanken, die aktuell verfügbar sind. Es wurde ursprünglich 1986 als Nachfolger von INGRES, einem in den frühen 1970er Jahren begonnenen Open-Source-SQL-Projekt für relationale Datenbanken, entwickelt und war die Idee von Michael Stonebraker, einem Informatikprofessor in Berkeley.
+
+ \item[Discord] ist ein Service für die Online-Kommunikation, Instant Messaging, Sprach- und Videokonferenzen. Es ist sowohl als Webanwendung als auch als Client-Software auf allen gängigen Betriebssystemen nutzbar. Ursprünglich war Discord vornehmlich für die Videospiel-Szene gedacht, um während des Spielens Informationen mit Mitspielern austauschen zu können. Inzwischen wird Discord jedoch von einer großen Anzahl an Online-Communities genutzt. Das Konzept von Discord stammt von Jason Citron, der OpenFeint, eine Social-Gaming-Plattform für mobile Spiele, gegründet hatte, und von Stanislav Vishnevskiy, dem Gründer von Guildwork, einer weiteren Social-Gaming-Plattform.
+
+ \item[Die Java Discord API (JDA)] ist eine umfassende Programmbibliothek, die Entwicklern ermöglicht, Discord-Bots in der Programmiersprache Java zu erstellen und zu verwalten. JDA bietet eine hohe Abstraktionsebene, um die Kommunikation zwischen einem Java-Programm und der Discord-API zu erleichtern. Mit JDA können Entwickler auf verschiedene Funktionen und Ereignisse in Discord zugreifen, wie das Empfangen und Senden von Nachrichten, das Verwalten von Servern, Kanälen und Benutzern sowie das Reagieren auf verschiedene Interaktionen innerhalb von Discord.
         
         Zu den Hauptfunktionen der JDA gehören:
         \begin{itemize}
@@ -60,4 +79,4 @@ Zur Durführung des Projektes ist die Nutzung der folgenden Tools und Technologi
         \end{itemize}
         
         JDA ist besonders für seine einfache Handhabung und umfangreiche Dokumentation bekannt, die es sowohl Anfängern als auch erfahrenen Entwicklern ermöglicht, leistungsstarke und funktionsreiche Discord-Bots zu erstellen. Die Bibliothek wird aktiv gepflegt und weiterentwickelt, um stets mit den neuesten Änderungen und Funktionen der Discord-API kompatibel zu bleiben.
-\end{itemize}
+\end{description}
