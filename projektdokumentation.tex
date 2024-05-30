@@ -40,9 +40,9 @@
 
 \usepackage[
     ,automark
-    ,footsepline
+    % ,footsepline
     ,headsepline
-    ,plainfootsepline
+    % ,plainfootsepline
     ,plainheadsepline
 ]{scrlayer-scrpage}
 \pagestyle{scrheadings}
@@ -117,7 +117,7 @@ autocite=footnote,
 \addbibresource{projekt.bib}
 
 \usepackage{enumitem}
-\setlist{noitemsep}
+% \setlist{noitemsep}
 
 %\usepackage{grffile}           % Allows you to include images (like graphicx). Usage: \includegraphics{path/to/file}
 
@@ -210,7 +210,8 @@ autocite=footnote,
     name={Endpunkt},
     description={
         Ein Endpunkt ist eine spezifische URL innerhalb einer API, die eine bestimmte Funktion oder Ressource repräsentiert. Endpunkte werden verwendet, um verschiedene Operationen wie das Abrufen von Daten, das Senden von Informationen oder das Ausführen von Aktionen zu ermöglichen. Jeder Endpunkt wird durch eine HTTP-Methode (GET, POST, PUT, DELETE usw.) und eine URL definiert. Zum Beispiel könnte ein Endpunkt für das Abrufen von Benutzerinformationen in einer API die URL \url{/users/{id}} haben und mit der HTTP-Methode GET aufgerufen werden.
-    }
+    },
+    plural={Endpunkten}
 }
 
 \newglossaryentry{RESTAPI}{
@@ -266,6 +267,12 @@ autocite=footnote,
 {
     name=Design Patterns,
     description={Design Patterns sind bewährte Lösungsmuster für häufig auftretende Probleme in der Softwareentwicklung. Sie bieten eine strukturierte und wiederverwendbare Möglichkeit, Probleme zu lösen und Entwurfsentscheidungen zu treffen. Design Patterns helfen Entwicklern, bewährte Praktiken zu nutzen, Code zu organisieren, die Wartbarkeit zu verbessern und die Lesbarkeit zu erhöhen},
+}
+
+\newglossaryentry{CloudService}
+{
+    name=Cloud-Service,
+    description={Ein Cloud-Service ist ein Dienst, der über das Internet bereitgestellt wird und auf Cloud-Computing-Technologien basiert. Cloud-Services ermöglichen es Benutzern, auf Anwendungen, Daten und Ressourcen zuzugreifen, ohne dass sie physische Hardware oder Software installieren oder verwalten müssen}
 }
 
 

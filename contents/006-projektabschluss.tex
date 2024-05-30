@@ -4,133 +4,58 @@
 
 \subsection{Erreichung des Projektziels}\label{erreichung-des-projektziels}
 
-Ziel des Projekts war die Entwicklung eines modularen Frameworks auf Basis eines bestehenden Discord Frameworks für Java, das als Cloud Service angeboten wird. Benutzer sollten in der Lage sein, selbst geschriebene Plugins über ein Webinterface zu laden und zu konfigurieren, ohne das Framework selbst hosten zu müssen. Nachfolgend ein detaillierter Überblick über die erreichten und nicht erreichten Ziele:
+Ziel des Projekts war die Entwicklung eines modularen Frameworks auf Basis eines bestehenden Discord-Frameworks für Java, das als Cloud-Service angeboten wird. Benutzer sollten in der Lage sein, selbst geschriebene Plugins über ein Webinterface zu laden und zu konfigurieren, ohne das Framework selbst hosten zu müssen. Im Folgenden ein detaillierter Überblick über die erreichten und nicht erreichten Ziele:
 
 \subsection*{Erreichte Ziele}
 
-\begin{table}[!h]
-    \centering
-    \begin{tabular}{lp{10cm}}
-        \toprule
-        \textbf{Ziel} & \textbf{Beschreibung} \\
-        \midrule
-        Modulares Framework &
-        \begin{itemize}
-            \item Ein eigenständiges modulares Framework wurde erfolgreich entwickelt.
-            \item Nutzer können selbst geschriebene Plugins laden, aktivieren, deaktivieren und konfigurieren.
-        \end{itemize} \\
-        \midrule
-        Cloud-Service Bereitstellung &
-        \begin{itemize}
-            \item Das Framework wird erfolgreich als Cloud-Service angeboten, so dass die Nutzer keinen eigenen Hosting-Service benötigen.
-        \end{itemize} \\
-        \midrule
-        Discord-Bot Integration &
-        \begin{itemize}
-            \item Der entwickelte Discord-Bot kann von Nutzern auf eigene Server geladen werden.
-            \item Über das Weboberfläche können Einstellungen vorgenommen und Plugins verwaltet werden.
-        \end{itemize} \\
-        \midrule
-        Weboberfläche und REST-API &
-        \begin{itemize}
-            \item Die Weboberfläche ermöglicht es Nutzern, ihre Instanz des Frameworks zu verwalten.
-            \item REST-API wurde entwickelt und integriert, um die Weboberfläche mit dem REST-Server zu verbinden, Anfragen zu verarbeiten und Daten in der Datenbank zu speichern.
-        \end{itemize} \\
-        \midrule
-        Plugins &
-        \begin{itemize}
-            \item Begrüßung neuer Mitglieder in einem definierten Channel.
-            \item Mitteilung beim Verlassen eines Mitglieds.
-            \item Kicken/Bannen von Mitgliedern, mit oder ohne Text-Grund.
-            \item Dynamische Rollenvergabe anhand von Emoji-Reaktionen.
-            \item Broadcast von Nachrichten mit Discord-Embed Support.
-        \end{itemize} \\
-        \bottomrule
-    \end{tabular}
-    \caption{Erreichte Ziele}
-    \label{tab:erreichte_ziele}
-\end{table}
+\begin{description}
+    \item[Modulares Framework:] Ein eigenständiges modulares Framework wurde erfolgreich entwickelt. Nutzer können selbst geschriebene Plugins laden, aktivieren, deaktivieren und konfigurieren.
+    \item[Cloud-Service Bereitstellung:] Das Framework wird erfolgreich als Cloud-Service angeboten, sodass die Nutzer keinen eigenen Hosting-Service benötigen.
+    \item[Discord-Bot Integration:] Der entwickelte Discord-Bot kann von Nutzern auf eigene Server geladen werden. Über die Weboberfläche können Einstellungen vorgenommen und Plugins verwaltet werden.
+    \item[Weboberfläche und REST-API:] Die Weboberfläche ermöglicht es Nutzern, ihre Instanz des Frameworks zu verwalten. Eine REST-API wurde entwickelt und integriert, um die Weboberfläche mit dem REST-Server zu verbinden, Anfragen zu verarbeiten und Daten in der Datenbank zu speichern.
+    \item[Plugins:] Die folgenden Plugins wurden erfolgreich implementiert:
+    \begin{itemize}
+        \item Begrüßung neuer Mitglieder in einem definierten Channel
+        \item Mitteilung beim Verlassen eines Mitglieds
+        \item Kicken/Bannen von Mitgliedern, mit oder ohne Text-Grund
+        \item Dynamische Rollenvergabe anhand von Emoji-Reaktionen
+        \item Broadcast von Nachrichten mit Discord-Embed-Support
+    \end{itemize}
+\end{description}
 
 \subsection*{Nicht erreichte Ziele}
 
-\begin{table}[!h]
-    \centering
-    \begin{tabular}{lp{10cm}}
-        \toprule
-        \textbf{Ziel} & \textbf{Beschreibung} \\
-        \midrule
-        Erweiterung der Plugins &
-        \begin{itemize}
-            \item Keine zusätzlichen Plugins über die geplanten hinaus wurden implementiert, obwohl dies optional war.
-        \end{itemize} \\
-        \midrule
-        Erweiterte REST-API Schnittstellen &
-        \begin{itemize}
-            \item Weitere Default-REST-API Schnittstellen, die über die Mitglieds- und Rollenauflistung hinausgehen, wurden nicht hinzugefügt.
-        \end{itemize} \\
-        \midrule
-        Default REST-API Funktionen &
-        \begin{itemize}
-            \item Standard-REST-API zur Auflistung aller Mitglieder und deren Rollen ohne zusätzliche Plugins.
-        \end{itemize} \\
-        \bottomrule
-    \end{tabular}
-    \caption{Nicht erreichte Ziele}
-    \label{tab:nicht_erreichte_ziele}
-\end{table}
+\begin{description}
+    \item[Erweiterung der Plugins:] Keine zusätzlichen Plugins über die geplanten hinaus wurden implementiert, obwohl dies optional war.
+    \item[Erweiterte REST-API Schnittstellen:] Weitere Default-REST-API-Schnittstellen, die über die Mitglieds- und Rollenauflistung hinausgehen, wurden nicht hinzugefügt.
+    \item[Default REST-API Funktionen:] Standard-REST-API zur Auflistung aller Mitglieder und deren Rollen ohne zusätzliche Plugins wurde nicht implementiert.
+\end{description}
 
 \subsection*{Zusammenfassung}
 
-Das Projekt wurde weitgehend erfolgreich abgeschlossen. Das modulare Framework wurde wie geplant entwickelt und als Cloud-Service zur Verfügung gestellt. Nutzer können Plugins über eine benutzerfreundliche Weboberfläche laden und konfigurieren. Alle geplanten Standard-Plugins und die Kernfunktionalität der REST-API wurden implementiert. Einige zusätzliche Funktionen und Erweiterungen wurden nicht implementiert, was jedoch die Kernfunktionalität und die Erreichung der Hauptziele des Projekts nicht beeinträchtigt.
+Das Projekt wurde weitgehend erfolgreich abgeschlossen. Das modulare Framework wurde wie geplant entwickelt und als Cloud-Service zur Verfügung gestellt. Nutzer können Plugins über eine benutzerfreundliche Weboberfläche laden und konfigurieren. Alle geplanten Standard-Plugins und die Kernfunktionalität der REST-API wurden implementiert. Einige zusätzliche Funktionen und Erweiterungen wurden nicht umgesetzt, was jedoch die Kernfunktionalität und die Erreichung der Hauptziele des Projekts nicht beeinträchtigt. Insgesamt wurde das Hauptziel erreicht, ein robustes und benutzerfreundliches modulares Framework für Discord-Bots zu schaffen, das den Nutzern flexible Anpassungsmöglichkeiten bietet, ohne dass sie selbst hosten müssen.
 
-Insgesamt wurde das Hauptziel erreicht, ein robustes und benutzerfreundliches modulares Framework für Discord-Bots zu schaffen, das den Nutzern flexible Anpassungsmöglichkeiten bietet, ohne dass diese selbst hosten müssen.
-
-\subsection{Änderungen zur anfänglichen Planung}\label{uxe4nderungen-zur-anfuxe4nglichen-planung}
+\subsection{Änderungen zur anfänglichen Planung}\label{aenderungen-zur-anfaenglichen-planung}
 
 Im Laufe des Projekts wurden einige Änderungen an der ursprünglichen Planung vorgenommen. Diese Änderungen ergaben sich aus praktischen Herausforderungen und neuen Erkenntnissen während der Umsetzungsphase. Im Folgenden werden die wichtigsten Änderungen und die Gründe für diese Änderungen aufgeführt:
 
 \subsubsection*{Anpassungen der Datenbank}
 
-\begin{itemize}
-    \item \textbf{Häufige Anpassungen:}
-    \begin{itemize}
-        \item Während der Entwicklung mussten wir die Datenbankstruktur mehrfach anpassen.
-        \item Diese Änderungen waren notwendig, um neue Anforderungen und Optimierungen zu berücksichtigen, die während der Implementierung auftraten.
-    \end{itemize}
-\end{itemize}
+Während der Entwicklung mussten wir die Datenbankstruktur mehrfach anpassen. Diese Änderungen waren notwendig, um neue Anforderungen und Optimierungen zu berücksichtigen, die während der Implementierung auftraten.
 
 \subsubsection*{Designanpassungen}
 
-\begin{itemize}
-    \item \textbf{Designänderungen:}
-    \begin{itemize}
-        \item Das ursprüngliche Design ließ sich nicht immer 1:1 übernehmen.
-        \item Anpassungen wurden vorgenommen, um die Benutzerfreundlichkeit zu verbessern und technische Einschränkungen zu überwinden.
-    \end{itemize}
-\end{itemize}
+Das ursprüngliche Design ließ sich nicht immer 1:1 übernehmen. Anpassungen wurden vorgenommen, um die Benutzerfreundlichkeit zu verbessern und technische Einschränkungen zu überwinden.
 
 \subsubsection*{Verzicht auf Mitgliederliste}
 
-\begin{itemize}
-    \item \textbf{Entfernung der Mitgliederliste:}
-    \begin{itemize}
-        \item Ursprünglich war geplant, eine Liste aller Mitglieder und deren Rollen über die REST-API bereitzustellen.
-        \item Diese Funktion wurde entfernt, da sie gegen die Nutzungsbedingungen (ToS) von Discord verstoßen könnte, wenn sie nicht unbedingt erforderlich ist.
-        \item Discord legt großen Wert auf den Datenschutz der Mitglieder und hat strenge Einschränkungen für den Zugriff auf solche Daten.
-    \end{itemize}
-\end{itemize}
+Ursprünglich war geplant, eine Liste aller Mitglieder und deren Rollen über die REST-API bereitzustellen. Diese Funktion wurde entfernt, da sie gegen die Nutzungsbedingungen (ToS) von Discord verstoßen könnte, wenn sie nicht unbedingt erforderlich ist. Discord legt großen Wert auf den Datenschutz der Mitglieder und hat strenge Einschränkungen für den Zugriff auf solche Daten.
 
 \subsection*{Zusammenfassung}
 
-Die im Laufe des Projekts vorgenommenen Änderungen waren notwendig, um sowohl technischen als auch rechtlichen Herausforderungen zu begegnen. Die Anpassungen der Datenbank und des Designs trugen dazu bei, die Funktionalität und Benutzerfreundlichkeit des Frameworks zu verbessern. Der Verzicht auf eine Mitgliederliste war eine bewusste Entscheidung, um den Nutzungsbedingungen von Discord zu entsprechen und mögliche rechtliche Probleme zu vermeiden.
-
-Trotz dieser Änderungen wurden die Hauptziele des Projekts erreicht und das entwickelte Framework bietet eine robuste und flexible Lösung für die Verwaltung von Discord-Bots als Cloud-Service.
+Die im Laufe des Projekts vorgenommenen Änderungen waren notwendig, um sowohl technischen als auch rechtlichen Herausforderungen zu begegnen. Die Anpassungen der Datenbank und des Designs trugen dazu bei, die Funktionalität und Benutzerfreundlichkeit des Frameworks zu verbessern. Der Verzicht auf eine Mitgliederliste war eine bewusste Entscheidung, um den Nutzungsbedingungen von Discord zu entsprechen und mögliche rechtliche Probleme zu vermeiden. Trotz dieser Änderungen wurden die Hauptziele des Projekts erreicht und das entwickelte Framework bietet eine robuste und flexible Lösung für die Verwaltung von Discord-Bots als Cloud-Service.
 
 \subsection{Fazit}\label{fazit}
-
-% \subsection{Soll-/Ist-Vergleich}
-% \subsection{Lessons Learned}
-% \subsection{Ausblick}
 
 \subsection*{Teamarbeit}
 
@@ -138,20 +63,6 @@ Die Teamarbeit hat insgesamt gut funktioniert. Alle Teammitglieder haben sich en
 
 \subsection*{Persönlicher Gewinn}
 
-Das Projekt hat viele wertvolle Erfahrungen und Erkenntnisse auf persönlicher Ebene gebracht:
+Das Projekt hat viele wertvolle Erfahrungen und Erkenntnisse auf persönlicher Ebene gebracht. Es wurde deutlich, wie wichtig eine gründliche und flexible Planung ist, um auf unerwartete Herausforderungen effektiv reagieren zu können. Die Zusammenarbeit im Team hat gezeigt, wie wichtig klare Kommunikation und gegenseitige Unterstützung für ein erfolgreiches Projekt sind. Durch regelmäßige Reflexionen konnten wir uns kontinuierlich verbessern und aus Fehlern lernen. 
 
-\begin{itemize}
-    \item \textbf{Gute Planung:} Es wurde deutlich, wie wichtig eine gründliche und flexible Planung ist, um auf unerwartete Herausforderungen effektiv reagieren zu können.
-    \item \textbf{Zusammenarbeit:} Die Zusammenarbeit im Team hat gezeigt, wie wichtig klare Kommunikation und gegenseitige Unterstützung für ein erfolgreiches Projekt sind.
-    \item \textbf{Reflexion:} Durch regelmäßige Reflexionen konnten wir uns kontinuierlich verbessern und aus Fehlern lernen.
-    \item \textbf{Technische Fähigkeiten:}
-    \begin{itemize}
-        \item \textbf{Angular:} Vertiefte Kenntnisse in der Entwicklung von Webanwendungen mit Angular.
-        \item \textbf{Java:} Erweiterung des Verständnisses von Java und seiner Anwendung in der Backend-Entwicklung.
-        \item \textbf{REST APIs:} Einblicke in die Erstellung und Verwendung von RESTful APIs für die Kommunikation zwischen verschiedenen Systemen.
-        \item \textbf{Datenbanken:} Vertiefte Kenntnisse in der Datenbankverwaltung und -optimierung.
-        \item \textbf{Integration:} Verständnis dafür, wie verschiedene Technologien harmonisch zusammenarbeiten können, um eine robuste und effiziente Lösung zu schaffen.
-    \end{itemize}
-\end{itemize}
-
-Insgesamt hat das Projekt sowohl die fachlichen als auch die sozialen Kompetenzen gestärkt und wertvolle praktische Erfahrungen vermittelt, die für zukünftige Projekte von großem Nutzen sein werden.
+Auch die technischen Fähigkeiten wurden deutlich erweitert. Wir haben vertiefte Kenntnisse in der Entwicklung von Webanwendungen mit Angular sowie in der Backend-Entwicklung mit Java gewonnen. Zudem erhielten wir Einblicke in die Erstellung und Verwendung von RESTful APIs für die Kommunikation zwischen verschiedenen Systemen sowie in die Datenbankverwaltung und -optimierung. Insgesamt hat das Projekt sowohl die fachlichen als auch die sozialen Kompetenzen gestärkt und wertvolle praktische Erfahrungen vermittelt, die für zukünftige Projekte von großem Nutzen sein werden.
