@@ -1,0 +1,198 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{jda-wiki}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3a905669f2782332bfd246ffc99f7aba}{%
+           family={Austin\bibnamedelima Keener},
+           familyi={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Florian\bibnamedelima Spieß},
+           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3a905669f2782332bfd246ffc99f7aba}
+      \strng{fullhash}{3a905669f2782332bfd246ffc99f7aba}
+      \strng{bibnamehash}{3a905669f2782332bfd246ffc99f7aba}
+      \strng{authorbibnamehash}{3a905669f2782332bfd246ffc99f7aba}
+      \strng{authornamehash}{3a905669f2782332bfd246ffc99f7aba}
+      \strng{authorfullhash}{3a905669f2782332bfd246ffc99f7aba}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{JDA (Java Discord API) Documentation}
+      \field{urlday}{25}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{version}{v5.0.0-beta.24}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://jda.wiki/introduction/jda/
+      \endverb
+      \verb{url}
+      \verb https://jda.wiki/introduction/jda/
+      \endverb
+    \endentry
+    \entry{jda-github}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3a905669f2782332bfd246ffc99f7aba}{%
+           family={Austin\bibnamedelima Keener},
+           familyi={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Florian\bibnamedelima Spieß},
+           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3a905669f2782332bfd246ffc99f7aba}
+      \strng{fullhash}{3a905669f2782332bfd246ffc99f7aba}
+      \strng{bibnamehash}{3a905669f2782332bfd246ffc99f7aba}
+      \strng{authorbibnamehash}{3a905669f2782332bfd246ffc99f7aba}
+      \strng{authornamehash}{3a905669f2782332bfd246ffc99f7aba}
+      \strng{authorfullhash}{3a905669f2782332bfd246ffc99f7aba}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{JDA: Java Discord API}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{version}{v5.0.0-beta.24}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/discord-jda/JDA
+      \endverb
+      \verb{url}
+      \verb https://github.com/discord-jda/JDA
+      \endverb
+    \endentry
+    \entry{discord-guide}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8f5cc6430613f1c12f36965050bb7197}{%
+           family={{Discord}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{fullhash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{bibnamehash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{authorbibnamehash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{authornamehash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{authorfullhash}{8f5cc6430613f1c12f36965050bb7197}
+      \field{extraname}{1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Beginner's Guide to Discord}
+      \field{urlday}{22}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord
+      \endverb
+      \verb{url}
+      \verb https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord
+      \endverb
+    \endentry
+    \entry{discord-developer}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8f5cc6430613f1c12f36965050bb7197}{%
+           family={{Discord}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{fullhash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{bibnamehash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{authorbibnamehash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{authornamehash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{authorfullhash}{8f5cc6430613f1c12f36965050bb7197}
+      \field{extraname}{2}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Discord Developer Portal}
+      \field{urlday}{25}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://discord.com/developers/docs/intro
+      \endverb
+      \verb{url}
+      \verb https://discord.com/developers/docs/intro
+      \endverb
+    \endentry
+    \entry{discord-privacy}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8f5cc6430613f1c12f36965050bb7197}{%
+           family={{Discord}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{fullhash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{bibnamehash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{authorbibnamehash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{authornamehash}{8f5cc6430613f1c12f36965050bb7197}
+      \strng{authorfullhash}{8f5cc6430613f1c12f36965050bb7197}
+      \field{extraname}{3}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Discord Privacy Policy}
+      \field{urlday}{25}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://discord.com/privacy#2
+      \endverb
+      \verb{url}
+      \verb https://discord.com/privacy#2
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
