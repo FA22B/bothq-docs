@@ -36,11 +36,22 @@
     % includeheadfoot
 ]{geometry} % für Seitenränder
 
-\usepackage{scrlayer-scrpage}
+\usepackage[
+    ,automark
+    ,footsepline
+    ,headsepline
+    ,plainfootsepline
+    ,plainheadsepline
+]{scrlayer-scrpage}
 \pagestyle{scrheadings}
 \clearpairofpagestyles
 \ihead{\headmark}
+\ifoot{Philipp Batelka · Jan Mahnken · Daniel Quellenberg · Fabian Reichwald · Justus Sieweke · Christopher Spencer}
 \ofoot{\pagemark}
+
+\setkomafont{pageheadfoot}{\itshape\footnotesize}
+\setkomafont{pagehead}{\itshape}
+
 
 \usepackage{tabularray}
 \usepackage{longtable}
@@ -110,7 +121,6 @@ autocite=footnote,
 
 % Additional packages
 \usepackage{xurl}               % Lets you typeset urls. Usage: \url{https://...}
-% \usepackage[svgnames]{xcolor}   % Obviously colors. Usage: \color{red} Red text
 \usepackage{booktabs}           % Nice rules for tables. Usage \begin{tabular}\toprule ... \midrule ... \bottomrule\end{tabular}
 \usepackage{graphicx}           % A nice way to include images (see above: grffile)
 \usepackage{pgfgantt}           % For Gantt charts. Usage: \begin{ganttchart} ... \end{ganttchart}
@@ -139,7 +149,6 @@ autocite=footnote,
 ]{hyperref}                     % Provides clickable links in the PDF-document for \ref
 
 \usepackage{bookmark}
-
 
 % glossaries
 

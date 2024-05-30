@@ -6,16 +6,16 @@
 
 Für die Projektdurchführung wurde das agile Vorgehensmodell \gls{Scrum} gewählt. Scrum ist ein weit verbreitetes Framework für die agile Softwareentwicklung, das iterative und inkrementelle Prozesse unterstützt. Es besteht aus festen Rollen, Ereignissen und Artefakten, die bei der iterativen Softwareentwicklung unterstützen. Aufgrund der kurzen Projektdauer und der unregelmäßigen Verfügbarkeit der Teammitglieder wurde eine angepasste Version von Scrum verwendet, die die Flexibilität und Anpassungsfähigkeit des Frameworks beibehält, aber an die spezifischen Anforderungen des Projekts angepasst ist.
 
-Der Methodologie von Scrum folgend wurde das Projekt in drei Sprints unterteilt, wobei die Sprints abweichend von der Regel zwischen drei und sechs Wochen dauerten. Diese zusätzliche Flexibilität ermöglichte es dem Team, sich besser an die Anforderungen und den Fortschritt des Projekts anzupassen. Jeder Sprint wurde mit einem Sprint-Planungsmeeting gestartet, in dem die Ziele und Aufgaben für den Sprint festgelegt wurden. Während des Sprints fanden regelmäßige Weekly-Meetings\footnote{Scrum sieht zwar Daily-Meetings vor, doch aufgrund der unregelmäßigen Verfügbarkeit der Teammitglieder wurden wöchentliche Meetings abgehalten.} statt, um den Fortschritt zu überprüfen und Hindernisse zu beseitigen. Am Ende jedes Sprints wurde ein Sprint Review Meeting abgehalten, um die erreichten Ziele zu präsentieren und Feedback zu sammeln. Im \ref{fig:gantt-diagramm} auf Seite \pageref{fig:gantt-diagramm} sind die drei Sprints und ihre Phasen dargestellt.
+Der Methodologie von Scrum folgend wurde das Projekt in drei Sprints unterteilt, wobei die Sprints abweichend von der Regel zwischen drei und sechs Wochen dauerten. Diese zusätzliche Flexibilität ermöglichte es dem Team, sich besser an die Anforderungen und den Fortschritt des Projekts anzupassen. Jeder Sprint wurde mit einem Sprint-Planungsmeeting gestartet, in dem die Ziele und Aufgaben für den Sprint festgelegt wurden. Während des Sprints fanden regelmäßige Weekly-Meetings\footnote{Scrum sieht zwar Daily-Meetings vor, doch aufgrund der unregelmäßigen Verfügbarkeit der Teammitglieder wurden wöchentliche Meetings abgehalten.} statt, um den Fortschritt zu überprüfen und Hindernisse zu beseitigen. Am Ende jedes Sprints wurde ein Sprint Review Meeting abgehalten, um die erreichten Ziele zu präsentieren und Feedback zu sammeln. In Abbildung \ref{fig:gantt-diagramm} auf Seite \pageref{fig:gantt-diagramm} sind die drei Sprints und ihre Phasen dargestellt.
 
 Normalerweise sind Rollen und Verantwortlichkeiten in Scrum klar definiert. In diesem Projekt wurden die Rollen jedoch flexibel gehandhabt, da die Teammitglieder unterschiedliche Fähigkeiten und Verfügbarkeiten hatten. Die Teammitglieder übernahmen je nach Bedarf verschiedene Rollen, um sicherzustellen, dass die Anforderungen des Projekts erfüllt wurden. Die wichtigsten Rollen waren:
 
 \begin{itemize}
-    \item \textbf{Projektleitung}: Verantwortlich für die Planung, Koordination und Überwachung des Projekts zeichnete Christopher Spencer. Er stellte sicher, dass die Ziele erreicht wurden und Hindernisse beseitigt wurden.
-    \item \textbf{Backend}: Verantwortlich für die Implementierung der Backend-Funktionalität und die Integration von Datenbanken und APIs waren in erster Linie Christopher Spencer und Justus Sieweke.
-    \item \textbf{Frontend}: Verantwortlich für die Implementierung der Benutzeroberfläche und die Interaktion mit dem Backend zeichnete Jan Mahnken.
+    \item \textbf{Projektleitung}: Scrum sieht die Rolle des Projektleiters nicht vor, dennoch erschien es dem ganzen Team wichtig, eine Person zu haben, die verantwortlich für die Planung, Koordination und Überwachung des Projekts zeichnete – Christopher Spencer. Er stellte sicher, dass die Ziele erreicht und Hindernisse beseitigt wurden.
+    \item \textbf{Backend}: Die Implementierung der Backend-Funktionalität und die Integration von Datenbanken und APIs programmierten in erster Linie Christopher Spencer und Justus Sieweke.
+    \item \textbf{Frontend}: Die Implementierung der Benutzeroberfläche und die Interaktion mit dem Backend erledigte Jan Mahnken.
     \item \textbf{Plugins}: Die Implementierung von Plugins des Bot-Frameworks wurde in Arbeitsteilung von Philipp Batelka, Jahn Mahnken, Daniel Quellenberg, Fabian Reichwald, Justus Sieweke und Christopher Spencer erledigt. Die Entwickler arbeiteten eng zusammen, um die Anforderungen umzusetzen und den Code zu überprüfen.
-    \item \textbf{Dokumentation und Marketing}: Verantwortlich für die Erstellung und Pflege der Projektdokumentation, der Projektpräsentation und des Marketingpitches waren Philipp Batelka und Daniel Quellenberg. Beide sorgten dafür, dass alle wichtigen Informationen und Entscheidungen dokumentiert wurden.
+    \item \textbf{Dokumentation und Marketing}: Verantwortlich für die Erstellung und Pflege der Projektdokumentation, der Projektpräsentation und des Marketingpitches waren Philipp Batelka, Daniel Quellenberg und Fabian Reichwald. Sie sorgten dafür, dass alle wichtigen Informationen und Entscheidungen dokumentiert wurden.
 \end{itemize}
 
 Ein großer Vorteil der verteilten Verantwortlichkeiten lag darin, dass die unterschiedlichen Fähigkeiten und Erfahrungen der Teammitglieder optimal genutzt werden konnten. Dies ermöglichte es jedem Einzelnen das Team genau in den Aufgaben zu unterstützen, für die sie am besten geeignet waren. 
@@ -28,8 +28,8 @@ Als Projektmanagement-Tool wurde \gls{Jira} eingesetzt. Die Planung, Durchführu
   % ,canvas/.append style={draw=none}
   ,vgrid
   ,hgrid
-  ,x unit=.95cm
-  ,y unit chart=.95cm
+  ,x unit=.85cm
+  ,y unit chart=.85cm
   % ,title/.style={draw=none, fill=none}
   ,title height=1,
   ,title label font=\bfseries\footnotesize
@@ -80,32 +80,32 @@ Als Projektmanagement-Tool wurde \gls{Jira} eingesetzt. Die Planung, Durchführu
   % Sprint 1
   \ganttgroup{Sprint 1}{1}{7} \\
   \ganttbar[name=elem0]{Anforderungsanalyse}{1}{1} \\
-  \ganttbar[name=elem1]{Design}{2}{3} \\
+  \ganttbar[name=elem1]{Design}{2}{7} \\
   \ganttbar[name=elem2]{Implementierung}{4}{7} \\
-  \ganttmilestone[name=Sprint1Ende]{Sprint 1 Ende}{7} \\[grid]
+  \ganttmilestone[name=Sprint1Ende]{Sprint 1 Ende / Retro / Planung}{7} \\[grid]
 
   % Sprint 2
   \ganttgroup{Sprint 2}{8}{13} \\
   \ganttbar[name=elem3]{Implementierung}{8}{10} \\
   \ganttbar[name=elem4]{Testen}{11}{12} \\
   \ganttbar[name=elem5]{Integration}{13}{13} \\
-  \ganttmilestone[name=Sprint2Ende]{Sprint 2 Ende}{13} \\[grid]
+  \ganttmilestone[name=Sprint2Ende]{Sprint 2 Ende / Retro / Planung}{13} \\[grid]
 
   % Sprint 3
   \ganttgroup{Sprint 3}{14}{16} \\
   \ganttbar[name=elem6]{Fehlerbehebung}{14}{15} \\
   \ganttbar[name=elem7]{Feinschliff und Dokumentation}{16}{16} \\
-  \ganttmilestone[name=Sprint3Ende]{Sprint 3 Ende}{16} \\
+  \ganttmilestone[name=Sprint3Ende]{Sprint 3 Ende / Retro / Planung}{16} \\
 
   % Relations 
-  \ganttlink{elem0}{elem1} 
-  \ganttlink{elem1}{elem2} 
-  \ganttlink{elem2}{Sprint1Ende}
-  \ganttlink{elem3}{elem4} 
-  \ganttlink{elem4}{elem5} 
-  \ganttlink{elem5}{Sprint2Ende} 
-  \ganttlink{elem6}{elem7} 
-  \ganttlink{elem7}{Sprint3Ende}
+  % \ganttlink{elem0}{elem1}
+  % \ganttlink{elem1}{elem2} 
+  % \ganttlink{elem2}{Sprint1Ende}
+  % \ganttlink{elem3}{elem4} 
+  % \ganttlink{elem4}{elem5} 
+  % \ganttlink{elem5}{Sprint2Ende} 
+  % \ganttlink{elem6}{elem7} 
+  % \ganttlink{elem7}{Sprint3Ende}
   
 \end{ganttchart}
 \caption{Gantt-Diagramm der Projektphasen}\label{fig:gantt-diagramm}
@@ -321,280 +321,3 @@ Konkrete Testfälle:
 \subsubsection{Zusammenfassung der Testergebnisse}
 
 Die durchgeführten Tests haben gezeigt, dass die Anwendung stabil und funktional ist. Alle kritischen Funktionen wurden erfolgreich getestet und funktionieren wie erwartet. Es wurden keine schwerwiegenden Fehler gefunden, und kleinere Bugs wurden behoben. Die Anwendung erfüllt die gestellten Anforderungen und ist bereit für den Einsatz.
-
-Diese ausführliche Beschreibung der Projektdurchführung sollte eine solide Grundlage für Ihre Dokumentation bieten. Passen Sie die Inhalte nach Bedarf an und erweitern Sie sie, um spezifische Details und Erkenntnisse aus Ihrem Projekt zu integrieren.
-
-
-
-
-
-% % !TEX root = ../projektdokumentation.tex
-
-% \section{Projektdurchführung}\label{projektdurchfuxfchrung}
-
-% % \section{Entwurfsphase}
-% % \subsection{Zielplattform}
-% % \subsection{Architekturdesign}
-% % \subsection{Entwurf der Benutzeroberfläche}
-% % \subsection{Datenmodell}
-% % \subsection{Geschäftslogik}
-% % \subsection{Maßnahmen zur Qualitätssicherung}
-% % \subsection{Pflichtenheft/Datenverarbeitungskonzept}
-
-% \subsection{Vorgehensmodell}\label{vorgehensmodell}
-
-% Für die Projektdurchführung wurde das agile Vorgehensmodell \gls{Scrum} gewählt. Scrum ist ein weit verbreitetes Framework für die agile Softwareentwicklung, das iterative und inkrementelle Prozesse unterstützt. Es besteht aus festen Rollen, Ereignissen und Artefakten, die bei der iterativen Softwareentwicklung unterstützen.
-
-% Die Entscheidung für Scrum wurde aus mehreren Gründen getroffen. Erstens ermöglicht Scrum eine flexible und anpassungsfähige Entwicklung, die besonders nützlich ist, wenn sich Anforderungen im Laufe des Projekts ändern können. Zweitens fördert Scrum eine enge Zusammenarbeit und kontinuierliche Kommunikation im Team, was zu einer besseren Koordination und höherer Produktivität führt. Drittens erleichtert die iterative Natur von Scrum eine regelmäßige Überprüfung und Anpassung des Projekts, was zu einer höheren Qualität des Bot-Framework geführt hat.
-
-% Der Methodologie von Scrum folgend wurde das Projekt in drei Sprints unterteilt, wobei jeder Sprint eine feste Dauer von vier Wochen hatte. Dies ermöglichte es dem Team, sich auf kurzfristige Ziele zu konzentrieren und regelmäßig Fortschritte zu präsentieren. Die in unserem Fall wöchentlichen Stand-up-Meetings (Daily Scrum) förderten die Transparenz und halfen dabei, Hindernisse schnell zu identifizieren und zu beseitigen. Durch die Sprint Reviews konnte kontinuierlich Feedback vom ganzen Team eingeholt und in die nächste Planungsphase integriert werden. Insgesamt führte der Einsatz von Scrum zu einer besseren Planbarkeit, höheren Flexibilität und einer kontinuierlichen Verbesserung der Projektarbeit.
-
-% \subsection{Umsetzung}\label{umsetzung}
-
-% \subsubsection{Klassenmodell}\label{klassenmodell}
-
-% Das Klassenmodell zeigt die wichtigsten Klassen, ihre
-% Attribute und Methoden sowie die Beziehungen zwischen den Klassen.
-
-% Zu den Hauptklassen gehören:
-
-
-
-
-
-% Die Beziehungen zwischen den Entitäten sind durch Assoziationen,
-% Aggregationen und Kompositionen gekennzeichnet. Zum Beispiel hat die
-% Klasse \texttt{Server} eine Aggregation von \texttt{Plugin}, was
-% bedeutet, dass ein Server mehrere Plugins haben kann, aber ein Plugin
-% ohne einen Server existieren kann.
-
-% \subsubsection{Datenhaltung}\label{datenhaltung}
-
-% Für die Datenhaltung wurde eine relationale Post\-greSQL-Datenbank erstellt. Die Datenbank enthält Tabellen für Benutzer, Server, Plugins und andere Entitäten.
-
-% \begin{itemize}
-%   \item
-%         Wahl der Datenhaltung:
-%   \item
-%         Beschreibung der Datenbankstruktur und des Datenbankmodells
-% \end{itemize}
-
-% \subsubsection{Datenbankstruktur und
-% Datenbankmodell}\label{datenbankstruktur-und-datenbankmodell}
-
-% Die Datenbank besteht aus vier Haupttabellen: \texttt{users},
-% \texttt{plugins}, \texttt{servers} und \texttt{server\_plugins}. Jede
-% dieser Tabellen speichert spezifische Informationen, die für den Betrieb
-% und die Verwaltung der Anwendung notwendig sind. Nachfolgend werden die
-% Tabellen und ihre Spalten detailliert beschrieben, gefolgt von einer
-% Darstellung der Beziehungen zwischen den Tabellen.
-
-% \paragraph{\texorpdfstring{Tabelle
-% \texttt{users}}{Tabelle users}}\label{tabelle-users}
-
-% Die Tabelle \texttt{users} speichert Informationen über die Benutzer der
-% Anwendung. Jede Zeile repräsentiert einen einzelnen Benutzer.
-
-% \begin{itemize}
-% \item
-%   \textbf{id} (INTEGER, PRIMARY KEY, AUTOINCREMENT): Eindeutige
-%   Identifikationsnummer des Benutzers. Dies ist der Primärschlüssel der
-%   Tabelle und wird automatisch inkrementiert.
-% \item
-%   \textbf{username} (TEXT, UNIQUE, NOT NULL): Der Benutzername des
-%   Nutzers, der zur Anmeldung verwendet wird. Dieser muss eindeutig sein.
-% \item
-%   \textbf{password} (TEXT, NOT NULL): Der Hashwert des Passworts des
-%   Benutzers. Aus Sicherheitsgründen wird das Passwort nicht im Klartext
-%   gespeichert.
-% \item
-%   \textbf{roles} (TEXT): Rollen des Benutzers (z.B. Administrator,
-%   Benutzer). Diese Spalte kann mehrere Rollen in einem bestimmten Format
-%   enthalten (z.B. durch Kommata getrennt).
-% \end{itemize}
-
-% \paragraph{\texorpdfstring{Tabelle
-% \texttt{plugins}}{Tabelle plugins}}\label{tabelle-plugins}
-
-% Die Tabelle \texttt{plugins} enthält Informationen über die
-% verschiedenen Plugins, die in der Anwendung verwendet werden können.
-% Jedes Plugin stellt eine eigenständige Erweiterung der Funktionalität
-% dar.
-
-% \begin{itemize}
-% \item
-%   \textbf{id} (INTEGER, PRIMARY KEY, AUTOINCREMENT): Eindeutige
-%   Identifikationsnummer des Plugins. Dies ist der Primärschlüssel der
-%   Tabelle und wird automatisch inkrementiert.
-% \item
-%   \textbf{name} (TEXT, UNIQUE, NOT NULL): Der Name des Plugins.
-% \item
-%   \textbf{description} (TEXT, NOT NULL): Eine Beschreibung des Plugins,
-%   die dessen Funktionalität erklärt.
-% \item
-%   \textbf{enabled} (BOOLEAN, NOT NULL, DEFAULT FALSE): Ein Flag, das
-%   angibt, ob das Plugin aktiviert (TRUE) oder deaktiviert (FALSE) ist.
-% \item
-%   \textbf{version} (TEXT, NOT NULL): Die Versionsnummer des Plugins.
-% \item
-%   \textbf{created\_at} (DATETIME, DEFAULT CURRENT\_TIMESTAMP): Das Datum
-%   und die Uhrzeit, wann das Plugin erstellt wurde.
-% \end{itemize}
-
-% \paragraph{\texorpdfstring{Tabelle
-% \texttt{servers}}{Tabelle servers}}\label{tabelle-servers}
-
-% Die Tabelle \texttt{servers} speichert Informationen über die
-% Discord-Server, auf denen der Bot installiert ist.
-
-% \begin{itemize}
-% \item
-%   \textbf{id} (INTEGER, PRIMARY KEY, AUTOINCREMENT): Eindeutige
-%   Identifikationsnummer des Servers. Dies ist der Primärschlüssel der
-%   Tabelle und wird automatisch inkrementiert.
-% \item
-%   \textbf{name} (TEXT, NOT NULL): Der Name des Discord-Servers.
-% \item
-%   \textbf{owner\_id} (INTEGER, NOT NULL, FOREIGN KEY REFERENCES
-%   users(id)): Die ID des Benutzers, der der Besitzer des Servers ist.
-%   Diese Spalte verweist auf \texttt{users.id}.
-% \item
-%   \textbf{created\_at} (DATETIME, DEFAULT CURRENT\_TIMESTAMP): Das Datum
-%   und die Uhrzeit, wann der Server in der Datenbank erstellt wurde.
-% \item
-%   \textbf{updated\_at} (DATETIME, DEFAULT CURRENT\_TIMESTAMP): Das Datum
-%   und die Uhrzeit, wann der Server zuletzt aktualisiert wurde.
-% \end{itemize}
-
-% \paragraph{\texorpdfstring{Tabelle
-% \texttt{server\_plugins}}{Tabelle server\_plugins}}\label{tabelle-server_plugins}
-
-% Die Tabelle \texttt{server\_plugins} verknüpft die Server und die
-% Plugins miteinander und speichert spezifische Konfigurationen für jedes
-% Plugin auf einem Server.
-
-% \begin{itemize}
-% \item
-%   \textbf{server\_id} (INTEGER, NOT NULL, FOREIGN KEY REFERENCES
-%   servers(id)): Die ID des Servers, auf dem das Plugin installiert ist.
-%   Diese Spalte verweist auf \texttt{servers.id}.
-% \item
-%   \textbf{plugin\_id} (INTEGER, NOT NULL, FOREIGN KEY REFERENCES
-%   plugins(id)): Die ID des Plugins, das auf dem Server installiert ist.
-%   Diese Spalte verweist auf \texttt{plugins.id}.
-% \item
-%   \textbf{enabled} (BOOLEAN, NOT NULL, DEFAULT FALSE): Ein Flag, das
-%   angibt, ob das Plugin auf diesem Server aktiviert (TRUE) oder
-%   deaktiviert (FALSE) ist.
-% \item
-%   \textbf{configurations} (TEXT): Ein JSON-String, der die
-%   Konfigurationseinstellungen des Plugins speichert. Dieser String
-%   enthält die spezifischen Einstellungen, die der Benutzer für das
-%   Plugin auf diesem Server vorgenommen hat.
-% \end{itemize}
-
-% \subsubsection{Beziehungen zwischen den
-% Tabellen}\label{beziehungen-zwischen-den-tabellen}
-
-% Die Tabellen sind durch verschiedene Beziehungen miteinander verknüpft,
-% um die Datenintegrität zu gewährleisten und die Struktur der Anwendung
-% abzubilden.
-
-% \begin{itemize}
-% \item
-%   \textbf{Benutzer und Server}: Ein Benutzer (\texttt{users}) kann
-%   mehrere Server (\texttt{servers}) besitzen. Dies wird durch die
-%   Fremdschlüsselbeziehung \texttt{servers.owner\_id} zu
-%   \texttt{users.id} dargestellt. Ein Benutzer kann somit mehrere Server
-%   verwalten.
-% \item
-%   \textbf{Server und Plugins}: Ein Server (\texttt{servers}) kann
-%   mehrere Plugins (\texttt{plugins}) verwenden. Diese Beziehung wird
-%   durch die Verknüpfungstabelle \texttt{server\_plugins} realisiert. Die
-%   Tabelle \texttt{server\_plugins} enthält die Fremdschlüssel
-%   \texttt{server\_plugins.server\_id} und
-%   \texttt{server\_plugins.plugin\_id}, die auf \texttt{servers.id} bzw.
-%   \texttt{plugins.id} verweisen. Diese Tabelle ermöglicht es, die
-%   Konfiguration jedes Plugins für jeden Server individuell zu speichern.
-% \end{itemize}
-
-% \subsubsection{Detaillierte Beschreibung der
-% Beziehungen}\label{detaillierte-beschreibung-der-beziehungen}
-
-% \paragraph{Benutzer und Server (1:n
-% Beziehung)}\label{benutzer-und-server-1n-beziehung}
-
-% \begin{itemize}
-% \item
-%   \textbf{Primärschlüssel}: \texttt{users.id}
-% \item
-%   \textbf{Fremdschlüssel}: \texttt{servers.owner\_id}
-% \item
-%   \textbf{Beschreibung}: Ein Benutzer kann mehrere Server besitzen.
-%   Jeder Server hat einen Besitzer, der in der \texttt{owner\_id}-Spalte
-%   der \texttt{servers}-Tabelle gespeichert ist.
-% \end{itemize}
-
-% \paragraph{Server und Plugins (n:m
-% Beziehung)}\label{server-und-plugins-nm-beziehung}
-
-% \begin{itemize}
-% \item
-%   \textbf{Primärschlüssel}: \texttt{servers.id}, \texttt{plugins.id}
-% \item
-%   \textbf{Fremdschlüssel}: \texttt{server\_plugins.server\_id},
-%   \texttt{server\_plugins.plugin\_id}
-% \item
-%   \textbf{Beschreibung}: Ein Server kann mehrere Plugins verwenden, und
-%   ein Plugin kann auf mehreren Servern verwendet werden. Diese
-%   n:m-Beziehung wird durch die \texttt{server\_plugins}-Tabelle
-%   vermittelt, die die IDs der Server und Plugins sowie die
-%   Konfigurationseinstellungen für die Plugins auf den jeweiligen Servern
-%   speichert.
-% \end{itemize}
-
-% \subsubsection{Zusammenfassung}\label{zusammenfassung}
-
-% Die Datenbankstruktur und das Modell bieten eine robuste Grundlage für
-% die Verwaltung von Benutzern, Discord-Servern und Plugins. Die klar
-% definierten Beziehungen zwischen den Tabellen gewährleisten eine hohe
-% Datenintegrität und ermöglichen eine flexible und erweiterbare
-% Architektur für die Anwendung. Die Tabelle \texttt{users} speichert
-% Benutzerinformationen, die Tabelle \texttt{servers} speichert
-% Serverinformationen, die Tabelle \texttt{plugins} speichert
-% Plugin-Informationen, und die Verknüpfungstabelle
-% \texttt{server\_plugins} speichert die Zuordnungen und Konfigurationen
-% der Plugins zu den jeweiligen Servern.
-
-% \subsubsection{Design Patterns}\label{design-patterns}
-
-% \begin{itemize}
-%   \item
-%         Einsatz von Design Patterns:
-%   \item
-%         Welche Design Patterns werden verwendet und warum?
-% \end{itemize}
-
-% \subsection{Qualitätssicherung}\label{qualituxe4tssicherung}
-
-% \subsubsection{Teststrategien}\label{teststrategien}
-
-% \begin{itemize}
-%   \item
-%         Beschreibung der Teststrategien:
-%   \item
-%         Welche Tests werden durchgeführt (Unit Tests, Integrationstests, Systemtests)?
-% \end{itemize}
-
-% \subsubsection{Testfälle}\label{testfuxe4lle}
-
-% \begin{itemize}
-%   \item
-%         Konkrete Testfälle:
-
-%         \begin{itemize}
-
-%           \item
-%                 Beschreibung der durchgeführten Testfälle und deren Ergebnisse
-%         \end{itemize}
-% \end{itemize}
