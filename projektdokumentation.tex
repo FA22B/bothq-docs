@@ -38,11 +38,22 @@
 
 \usepackage{amsmath}
 
-\usepackage{scrlayer-scrpage}
+\usepackage[
+    ,automark
+    ,footsepline
+    ,headsepline
+    ,plainfootsepline
+    ,plainheadsepline
+]{scrlayer-scrpage}
 \pagestyle{scrheadings}
 \clearpairofpagestyles
 \ihead{\headmark}
+\ifoot{Philipp Batelka · Jan Mahnken · Daniel Quellenberg · Fabian Reichwald · Justus Sieweke · Christopher Spencer}
 \ofoot{\pagemark}
+
+\setkomafont{pageheadfoot}{\itshape\footnotesize}
+\setkomafont{pagehead}{\itshape}
+
 
 \usepackage{tabularray}
 \usepackage{longtable}
@@ -54,6 +65,10 @@
 \definecolor{strings}{RGB}{40, 140, 160}
 \definecolor{numbers}{RGB}{140, 40, 180}
 \definecolor{basics}{RGB}{0, 0, 0}
+
+\definecolor{gantt-sprint}{RGB}{204,51,63}
+\definecolor{gantt-iteration}{RGB}{0,168,198}
+\definecolor{gantt-milestone}{RGB}{96,185,154}
 
 \usepackage{listings}
 \renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
@@ -108,10 +123,10 @@ autocite=footnote,
 
 % Additional packages
 \usepackage{xurl}               % Lets you typeset urls. Usage: \url{https://...}
-% \usepackage[svgnames]{xcolor}   % Obviously colors. Usage: \color{red} Red text
 \usepackage{booktabs}           % Nice rules for tables. Usage \begin{tabular}\toprule ... \midrule ... \bottomrule\end{tabular}
 \usepackage{graphicx}           % A nice way to include images (see above: grffile)
-%\usepackage{wrapfig}            % Allows text to wrap around figures. Usage \begin{wrapfigure}{r}{0.5\textwidth} ... \end{wrapfigure}   
+\usepackage{pgfgantt}           % For Gantt charts. Usage: \begin{ganttchart} ... \end{ganttchart}
+\usepackage{rotating}           % For rotating stuff. Usage: \begin{sideways} ... \end{sideways}
 \usepackage[hang]{footmisc}     % Gives you "hanging" footnotes. Usage \footnote{text}
 \deffootnote{1.5em}{0em}{\thefootnotemark\quad}
 
@@ -136,7 +151,6 @@ autocite=footnote,
 ]{hyperref}                     % Provides clickable links in the PDF-document for \ref
 
 \usepackage{bookmark}
-
 
 % glossaries
 
@@ -213,6 +227,46 @@ autocite=footnote,
     }
 }
 
+\newglossaryentry{Jira}
+{
+    name=Jira,
+    description={Jira ist ein weit verbreitetes Tool zur Projekt- und Aufgabenverwaltung, das von Atlassian entwickelt wurde. Es wird häufig in der Softwareentwicklung und im Projektmanagement eingesetzt, um agile Methoden wie Scrum und Kanban zu unterstützen. Mit Jira können Teams Projekte planen, Aufgaben verfolgen, Fortschritte visualisieren und Berichte erstellen. Es bietet Funktionen wie Issue-Tracking, Sprint-Management, Roadmaps und umfangreiche Integrationen mit anderen Entwicklungs- und Kollaborationstools},
+    see=[Siehe auch]{Scrum}
+}
+
+\newglossaryentry{Git}
+{
+    name=Git,
+    description={Git ist ein verteiltes Versionskontrollsystem, das von Linus Torvalds entwickelt wurde. Es wird häufig in der Softwareentwicklung eingesetzt, um Änderungen an Quellcode und Dateien zu verfolgen, zu verwalten und zu teilen. Git ermöglicht es Entwicklern, Änderungen in einem Repository zu speichern, Branches zu erstellen, Konflikte zu lösen und Änderungen zu veröffentlichen. Es bietet Funktionen wie Versionsverwaltung, Branching, Merging und Rebase. Git ist bekannt für seine Geschwindigkeit, Flexibilität und Skalierbarkeit},
+    see=[Siehe auch]{GitHub}
+}
+
+\newglossaryentry{GitHub}
+{
+    name=GitHub,
+    description={GitHub ist eine Webplattform für die Versionskontrolle und Zusammenarbeit an Softwareprojekten, die auf Git basiert. Es bietet Funktionen wie Issue-Tracking, Pull-Requests, Code-Reviews, Wikis und Projektmangement-Tools. GitHub wird von Millionen von Entwicklern und Teams weltweit genutzt, um Quellcode zu hosten, zu teilen und zusammenzuarbeiten. Es ist bekannt für seine Benutzerfreundlichkeit, soziale Funktionen und umfangreichen Integrationsmöglichkeiten},
+    see=[Siehe auch]{Git}
+}
+
+\newglossaryentry{Repository}
+{
+    name=Repository,
+    description={Ein Repository (auch Repo genannt) ist ein Speicherort für Quellcode, Dateien und Ressourcen, die in einem Versionskontrollsystem wie Git verwaltet werden. Ein Repository enthält die gesamte Historie der Änderungen, die an den Dateien vorgenommen wurden, sowie Metadaten wie Commits, Branches und Tags. Entwickler können ein Repository klonen, um eine lokale Kopie des Codes zu erhalten, Änderungen vorzunehmen und sie dann in das Hauptrepository zurückzuführen. Repositories werden häufig verwendet, um Quellcode für Softwareprojekte zu speichern und zu teilen},
+    see=[Siehe auch]{Git, GitHub, Pull-Requests}
+}
+
+\newglossaryentry{Pull-Requests}
+{
+    name=Pull-Requests,
+    description={Ein Pull-Request ist eine Funktion in Git-basierten Versionskontrollsystemen wie GitHub, die es Entwicklern ermöglicht, Änderungen an einem Repository vorzuschlagen und zu diskutieren. Ein Pull-Request enthält die vorgeschlagenen Änderungen, eine Beschreibung des Zwecks und der Auswirkungen der Änderungen sowie eine Diskussionsplattform für Feedback und Kommentare. Andere Entwickler können den Pull-Request überprüfen, kommentieren und genehmigen, bevor die Änderungen in das Hauptrepository übernommen werden. Pull-Requests sind ein wichtiger Bestandteil des Code-Review-Prozesses und fördern die Zusammenarbeit und Qualitätssicherung im Entwicklerteam},
+    see=[Siehe auch]{Code-Review}
+}
+
+\newglossaryentry{Design Patterns}
+{
+    name=Design Patterns,
+    description={Design Patterns sind bewährte Lösungsmuster für häufig auftretende Probleme in der Softwareentwicklung. Sie bieten eine strukturierte und wiederverwendbare Möglichkeit, Probleme zu lösen und Entwurfsentscheidungen zu treffen. Design Patterns helfen Entwicklern, bewährte Praktiken zu nutzen, Code zu organisieren, die Wartbarkeit zu verbessern und die Lesbarkeit zu erhöhen},
+}
 
 
 \newcounter{savepage}
